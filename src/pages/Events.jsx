@@ -1,5 +1,5 @@
 import React from "react";
-
+import Card from "../components/ui/Card";
 function Events() {
   return (
     <div className="container mx-auto p-4">
