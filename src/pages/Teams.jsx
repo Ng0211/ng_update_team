@@ -372,7 +372,7 @@ function Teams() {
   return (
     <div className="container mx-auto p-4 bg-[var(--bg-color)] flex flex-col items-center">
       <div className="w-full max-w-4xl flex flex-col items-center">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color-secondary)] mt-8">SAC Team Members</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">SAC Team Members</h1>
         <div className="w-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center m-4">
           {team.slice(0,2).map((person, idx) => (
             <Card key={idx} {...person} />
@@ -380,7 +380,7 @@ function Teams() {
         </div>
       </div>
       <div className="w-full max-w-4xl flex flex-col items-center">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color-secondary)] mt-8">Secretaries</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Secretaries</h1>
         <div className="w-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center m-4">
           {team.slice(2,16).map((person, idx) => (
             <Card key={idx} {...person} />
@@ -388,7 +388,7 @@ function Teams() {
         </div>
       </div>
       <div className="w-full max-w-4xl flex flex-col items-center">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color-secondary)] mt-8">Post Graduate Team</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Post Graduate Team</h1>
         <div className="w-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center m-4">
           {team.slice(16, 32).map((person, idx) => (
             <Card key={idx} {...person} />
@@ -396,7 +396,7 @@ function Teams() {
         </div>
       </div>
       <div className="w-full max-w-4xl flex flex-col items-center">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color-secondary)] mt-8">Design and Tech Team</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Design and Tech Team</h1>
         <div className="w-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center m-4">
           {team.slice(32,35).map((person, idx) => (
             <Card key={idx} {...person} />

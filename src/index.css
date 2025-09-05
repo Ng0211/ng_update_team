@@ -17,19 +17,21 @@
   -moz-osx-font-smoothing: grayscale;
 
   --bg-color: #f1e6dc;
-  --text-color: #f5f5f5;
-  --text-color-sub: #d5d5d5;
+  --text-color: #26282c;
+  --text-color-sub: #858585;
   --card-bg: rgb(48, 33, 34);
   --primary: #3b82f6;
-  --text-color-secondary: #26282c;
+  --text-color-secondary: #ececec;
+  --btn-color: #dab900;
 }
 .dark {
   --bg-color: #111111;
-  --text-color: #f5f5f5;
-  --text-color-sub: #d5d5d5;
+  --text-color: #ececec;
+  --text-color-sub: #858585;
   --card-bg: #1f2937; 
   --primary: #facc15;
-  --text-color-secondary: #eeeeee;
+  --text-color-secondary: #26282c;
+  --btn-color: #dab900;
 }
 
 body {
