@@ -38,7 +38,7 @@ function Contact() {
       <p className="mb-2 text-[var(--text-color)] flex justify-center">
         Have questions or suggestions? Get in touch with the Student Affairs Council.
       </p>
-    <div className="flex items-center justify-center bg-[var(--bg-color)] text-[var(--text-color)] p-4">
+    <div className="flex items-center justify-center bg-[var(--bg-color)] text-[var(--text-color)] p-4 mb-8">
       <form
         onSubmit={handleSubmit}
         className="bg-white/40 rounded-xl shadow-2xl p-8 w-full max-w-lg mt-8"
@@ -121,12 +121,7 @@ function Contact() {
 </button>
       </form>
     </div>
-    <div className="flex justify-center mt-16"><div className="bg-[var(--card-bg)] p-4 rounded mb-4 shadow-md flex-row justify-center text-white text-center px-8 md:px-48 ">
-        <h2 className="text-xl font-semibold mb-2 ">Contact Information</h2>
-        <p className=""><strong>Email:</strong> sac@iitd.ac.in</p>
-        <p className=""><strong>Phone:</strong> +91-11-2659-xxxx</p>
-        <p className=""><strong>Address:</strong> Student Affairs Council, IIT Delhi, Hauz Khas, New Delhi - 110016</p>
-      </div></div>
+    
     
     </div>
   );
