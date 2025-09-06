@@ -1,6 +1,41 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "../contexts/ThemeContext";
 
+// Import all activity images
+import backgroundImage from "../assets/activities/background_image.png";
+import danceImage from "../assets/activities/dance.png";
+import debImage from "../assets/activities/deb.png";
+import ankhiImage from "../assets/activities/ankhi.png";
+import musicImage from "../assets/activities/music.png";
+import designImage from "../assets/activities/design.png";
+import pfcImage from "../assets/activities/pfc.png";
+import hsImage from "../assets/activities/hs.png";
+import fineartsImage from "../assets/activities/finearts.png";
+import litImage from "../assets/activities/lit.png";
+import qcImage from "../assets/activities/qc.png";
+import spicImage from "../assets/activities/spic.png";
+import devImage from "../assets/activities/dev.png";
+import roboImage from "../assets/activities/robo.png";
+import axlrImage from "../assets/activities/axlr.png";
+import aeroImage from "../assets/activities/aero.png";
+import pacImage from "../assets/activities/pac.png";
+import ecoImage from "../assets/activities/eco.png";
+import igemImage from "../assets/activities/igem.png";
+import tesImage from "../assets/activities/tes.png";
+import acesImage from "../assets/activities/aces.png";
+import mathsocImage from "../assets/activities/mathsoc.png";
+import eesImage from "../assets/activities/ees.png";
+import physocImage from "../assets/activities/physoc.png";
+import mesImage from "../assets/activities/mes.png";
+import chemsocImage from "../assets/activities/chemsoc.png";
+import cesImage from "../assets/activities/ces.png";
+import edcImage from "../assets/activities/edc.png";
+import arImage from "../assets/activities/ar.png";
+import ipImage from "../assets/activities/ip.png";
+import onairImage from "../assets/activities/onair.png";
+import indraImage from "../assets/activities/indra.png";
+import enactusImage from "../assets/activities/enactus.png";
+
 function Activities() {
   const { theme } = useTheme();
   const [activeCategory, setActiveCategory] = useState("cultural");
@@ -12,67 +47,67 @@ function Activities() {
       {
         name: "Dance Club",
         instagram: "https://www.instagram.com/iitddanceclub/",
-        image: "/src/assets/activities/dance.png",
+        image: danceImage,
         alt: "Dance Club Logo"
       },
       {
         name: "Debating Club",
         instagram: "https://www.instagram.com/debsoc_iitd/",
-        image: "/src/assets/activities/deb.png",
+        image: debImage,
         alt: "Debating Club Logo"
       },
       {
         name: "Dramatics Club",
         instagram: "https://www.instagram.com/ankahi_iitd/",
-        image: "/src/assets/activities/ankhi.png",
+        image: ankhiImage,
         alt: "Dramatics Club Logo"
       },
       {
         name: "Music Club",
         instagram: "https://www.instagram.com/iitdmusicclub/",
-        image: "/src/assets/activities/music.png",
+        image: musicImage,
         alt: "Music Club Logo"
       },
       {
         name: "Design Club",
         instagram: "https://www.instagram.com/designclubiitd/",
-        image: "/src/assets/activities/design.png",
+        image: designImage,
         alt: "Design Club Logo"
       },
       {
         name: "Photography Club",
         instagram: "https://www.instagram.com/pfc.iitd/",
-        image: "/src/assets/activities/pfc.png",
+        image: pfcImage,
         alt: "Photography Club Logo"
       },
       {
         name: "Hindi Samiti",
         instagram: "https://www.instagram.com/hindisamiti.iitd/",
-        image: "/src/assets/activities/hs.png",
+        image: hsImage,
         alt: "Hindi Samiti Logo"
       },
       {
         name: "Fine Arts Club",
         instagram: "https://www.instagram.com/facc.azure.iitd/",
-        image: "/src/assets/activities/finearts.png",
+        image: fineartsImage,
         alt: "Fine Arts Club Logo"
       },
       {
         name: "Literary Club",
         instagram: "https://www.instagram.com/litclub.iitd/",
-        image: "/src/assets/activities/lit.png",
+        image: litImage,
         alt: "Literary Club Logo"
       },
       {
         name: "Quiz Club",
         instagram: "https://www.instagram.com/iitdqc/",
-        image: "/src/assets/activities/qc.png",
+        image: qcImage,
         alt: "Quiz Club Logo"
       },
       {
         name: "Spic Macay",
         instagram: "https://www.instagram.com/spicmacay_iitd/",
-        image: "/src/assets/activities/spic.png",
+        image: spicImage,
         alt: "Spic Macay Logo"
       }
     ],
@@ -80,91 +115,91 @@ function Activities() {
       {
         name: "DevClub",
         website: "https://www.devclub.in/",
-        image: "/src/assets/activities/dev.png",
+        image: devImage,
         alt: "DevClub Logo"
       },
       {
         name: "Robotics Club",
         website: "https://roboticsclub.iitd.ac.in/",
-        image: "/src/assets/activities/robo.png",
+        image: roboImage,
         alt: "Robotics Club Logo"
       },
       {
         name: "Axlr8",
         website: "https://automobileclub.iitd.ac.in/",
-        image: "/src/assets/activities/axlr.png",
+        image: axlrImage,
         alt: "Axlr8 Logo"
       },
       {
         name: "Aeromodelling Club",
         instagram: "https://www.instagram.com/aeroclub_iitd/",
-        image: "/src/assets/activities/aero.png",
+        image: aeroImage,
         alt: "Aeromodelling Club Logo"
       },
       {
         name: "Physics & Astronomy Club",
         website: "https://pac.iitd.ac.in/",
-        image: "/src/assets/activities/pac.png",
+        image: pacImage,
         alt: "PAC Logo"
       },
       {
         name: "Economics Club",
         instagram: "https://www.instagram.com/econclubiitd/",
-        image: "/src/assets/activities/eco.png",
+        image: ecoImage,
         alt: "Economics Club Logo"
       },
       {
         name: "iGem",
         website: "https://2023.igem.wiki/iit-delhi/team",
-        image: "/src/assets/activities/igem.png",
+        image: igemImage,
         alt: "iGem Logo"
       },
       {
         name: "Textile Engineering Society",
         website: "https://textile.iitd.ac.in/",
-        image: "/src/assets/activities/tes.png",
+        image: tesImage,
         alt: "TES Logo"
       },
       {
         name: "ACES ACM",
         instagram: "https://www.instagram.com/acesacm.iitdelhi/",
-        image: "/src/assets/activities/aces.png",
+        image: acesImage,
         alt: "ACES ACM Logo"
       },
       {
         name: "Mathematics Society",
         website: "https://mathsoc.iitd.ac.in/",
-        image: "/src/assets/activities/mathsoc.png",
+        image: mathsocImage,
         alt: "Mathsoc Logo"
       },
       {
         name: "Electrical Engineering Society",
         instagram: "https://www.instagram.com/ees_iitdelhi/",
-        image: "/src/assets/activities/ees.png",
+        image: eesImage,
         alt: "EES Logo"
       },
       {
         name: "Physics Society",
         instagram: "https://www.instagram.com/physoc.iitd/",
-        image: "/src/assets/activities/physoc.png",
+        image: physocImage,
         alt: "Physics Society Logo"
       },
       {
         name: "Mechanical Engineering Society",
         instagram: "https://www.instagram.com/mes.iitdelhi/",
-        image: "/src/assets/activities/mes.png",
+        image: mesImage,
         alt: "MES Logo"
       },
       {
         name: "Chemical Engineering Society",
         website: "https://ches.iitd.ac.in/",
-        image: "/src/assets/activities/chemsoc.png",
+        image: chemsocImage,
         alt: "Chemical Engineering Society Logo"
       },
       {
         name: "Civil Engineering Society",
         website: "https://civil.iitd.ac.in/",
-        image: "/src/assets/activities/ces.png",
+        image: cesImage,
         alt: "CES Logo"
       }
     ],
@@ -172,37 +207,37 @@ function Activities() {
       {
         name: "Entrepreneurship Development Cell",
         website: "https://edciitd.com/",
-        image: "/src/assets/activities/edc.png",
+        image: edcImage,
         alt: "EDC Logo"
       },
       {
         name: "Alumni Affairs",
         website: "https://alumni.iitd.ac.in/",
-        image: "/src/assets/activities/ar.png",
+        image: arImage,
         alt: "Alumni Affairs Logo"
       },
       {
         name: "International Programmes",
         website: "https://international.iitd.ac.in/",
-        image: "/src/assets/activities/ip.png",
+        image: ipImage,
         alt: "International Programmes Logo"
       },
       {
         name: "IITD OnAir",
         instagram: "https://www.instagram.com/iitdonair/",
-        image: "/src/assets/activities/onair.png",
+        image: onairImage,
         alt: "IITD OnAir Logo"
       },
       {
         name: "Indradhanu",
         website: "https://indradhanuiitd.in/",
-        image: "/src/assets/activities/indra.png",
+        image: indraImage,
         alt: "Indradhanu Logo"
       },
       {
         name: "Enactus IITD",
         website: "https://www.enactus-iitd.com/",
-        image: "/src/assets/activities/enactus.png",
+        image: enactusImage,
         alt: "Enactus Logo"
       }
     ]
@@ -258,23 +293,14 @@ function Activities() {
 
   return (
     <div className="w-full overflow-hidden">
-      {/* Background Image
-      <div 
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: "url('/src/assets/activities/background_image.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center'
-        }}
-      /> */}
-
+      
       {/* Header Section */}
       <div 
         className="pt-10 pb-10"
         style={{
-          backgroundImage: theme === 'light' ? "url('/src/assets/activities/background_image.png')" : 'none',
+          backgroundImage: theme === 'light' ? `url(${backgroundImage})` : 'none',
           backgroundSize: 'cover',
-          backgroundPosition: 'center center'
+          backgroundPosition: 'center'
         }}
       >
         <h2 className="mb-10 text-3xl md:text-4xl lg:text-5xl font-bold text-center" style={{ color: 'var(--text-color)' }}>

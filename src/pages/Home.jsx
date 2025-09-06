@@ -2,6 +2,18 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "../contexts/ThemeContext";
 import ClubCard from "../components/ClubCard";
 
+// Import all images
+import backgroundImage from "../assets/activities/background_image.png";
+import iitDelhiImage from "../assets/home/iit_delhi.jpeg";
+import sacLogo from "../assets/home/sac_logo.png";
+import sacCentreImage from "../assets/home/sac_centre_bg_removed.png";
+import bhmLogo from "../assets/home/bhm_logo.png";
+import brcaLogo from "../assets/home/brca.png";
+import bswLogo from "../assets/home/bsw_logo.png";
+import bsaLogo from "../assets/home/bsa.png";
+import bspLogo from "../assets/home/bsp_logo.png";
+import iitdClubsImage from "../assets/home/IITDClubs.png";
+
 function Home() {
   const { theme } = useTheme();
   const [typedText, setTypedText] = useState("");
@@ -45,7 +57,7 @@ function Home() {
     <div 
     className="w-full overflow-hidden main"
     style={{
-      backgroundImage: theme === 'light' ? "url('/src/assets/activities/background_image.png')" : 'none',
+      backgroundImage: theme === 'light' ? `url(${backgroundImage})` : 'none',
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat'
@@ -55,7 +67,7 @@ function Home() {
       <section 
         className="relative w-full h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: "url('/src/assets/home/iit_delhi.jpeg')",
+          backgroundImage: `url(${iitDelhiImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat'
@@ -69,7 +81,7 @@ function Home() {
           <div className="flex md:mt-[50px] mt-[150px] md:mb-6 sm:mb-0 sm:mr-6">
             <img 
               className="w-32 sm:w-40 md:w-48 h-auto object-contain" 
-              src="/src/assets/home/sac_logo.png" 
+              src={sacLogo} 
               alt="SAC Logo" 
             />
           </div>
@@ -132,7 +144,7 @@ function Home() {
             <ClubCard
               className="ml-auto"
               href="https:/home/bhm.iitd.ac.in"
-              imageSrc="/src/assets/home/bhm_logo.png"
+              imageSrc={bhmLogo}
               imageAlt="BHM Logo"
               title="Board for Hostel Management"
               description="Manages hostel facilities and student accommodation"
@@ -141,7 +153,7 @@ function Home() {
             <ClubCard
               className="ml-auto"
               href="https://brca.iitd.ac.in"
-              imageSrc="/src/assets/home/brca.png"
+              imageSrc={brcaLogo}
               imageAlt="BRCA Logo"
               title="Board for Recreational and Creative Activities"
               description="Organizes cultural and recreational events"
@@ -150,7 +162,7 @@ function Home() {
             <ClubCard
               className="ml-auto"
               href="https://bsw.iitd.ac.in"
-              imageSrc="/src/assets/home/bsw_logo.png"
+              imageSrc={bswLogo}
               imageAlt="BSW Logo"
               title="Board for Student Welfare"
               description="Focuses on student well-being and support"
@@ -162,7 +174,7 @@ function Home() {
           <div className="w-1/2 flex items-center justify-center m-0 md:p-8 scale-[80%] md:scale-100">
             <div className="flex flex-col items-center justify-center">
               <img 
-                src="/src/assets/home/sac_centre_bg_removed.png" 
+                src={sacCentreImage} 
                 alt="SAC Centre" 
                 className="w-11/12 h-auto pb-5 max-w-xl"
               />
@@ -173,7 +185,7 @@ function Home() {
           <div className="w-1/4 flex flex-col gap-5 md:gap-20 scale-[40%] md:scale-100 -translate-x-8 md:translate-x-0">
             <ClubCard
               href="https://bsa.iitd.ac.in"
-              imageSrc="/src/assets/home/bsa.png"
+              imageSrc={bsaLogo}
               imageAlt="BSA Logo"
               title="Board for Student Activities"
               description="Coordinates student activities and events"
@@ -181,7 +193,7 @@ function Home() {
             />
             <ClubCard
               href="https://bsp.iitd.ac.in"
-              imageSrc="/src/assets/home/bsp_logo.png"
+              imageSrc={bspLogo}
               imageAlt="BSP Logo"
               title="Board for Student Publications"
               description="Manages student publications and media"
@@ -189,7 +201,7 @@ function Home() {
             />
             <ClubCard
               href="/activities"
-              imageSrc="/src/assets/home/IITDClubs.png"
+              imageSrc={iitdClubsImage}
               imageAlt="IITD Clubs"
               title="IIT Delhi Clubs"
               description="Various student clubs and organizations"
