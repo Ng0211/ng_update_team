@@ -21,10 +21,10 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="/events"
+                to="/activities"
                 className="hover:text-[var(--primary)] transition-colors"
               >
-                Events
+                Activities
               </Link>
             </li>
             <li>

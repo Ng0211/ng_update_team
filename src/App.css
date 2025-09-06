@@ -1,0 +1,113 @@
+/* Custom CSS for SAC IIT Delhi Website */
+
+/* Import Font Awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/* Text Shadow Utilities */
+.text-shadow-sm {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-md {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.text-shadow-xl {
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Custom Animations */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* Activities Page Styles */
+.category-btn {
+  color: #4b3435;
+  width: 33.333%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .category-btn {
+    font-size: 0.75rem;
+  }
+}
+
+.category-btn.active {
+  color: #d3b250;
+}
+
+/* Responsive Design Helpers */
+@media (max-width: 800px) {
+  .three-column-layout {
+    flex-direction: column;
+  }
+  
+  .left-column,
+  .right-column {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    width: 100%;
+  }
+  
+  .board-card {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  
+  .middle-column {
+    width: 100%;
+    order: -1;
+  }
+  
+  .centre-image {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .iit-delhi-text {
+    font-size: 1.25rem;
+  }
+
+  .about-container {
+    margin: 0 1rem;
+  }
+
+  .board-card {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+/* Dark theme adjustments for custom elements */
+.dark .about-container {
+  background-color: rgba(43, 26, 24, 0.3);
+}
+
+.dark .board-card {
+  background-color: #1f2937;
+}
+
+.dark .board-card:hover {
+  background-color: #374151;
+}
+

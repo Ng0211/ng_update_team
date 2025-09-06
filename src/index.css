@@ -20,12 +20,27 @@
   --text-color: #111111;
   --card-bg: #f5f5f5;
   --primary: #3b82f6;
+
+
+  --activities-tab-bg: #9b8a8a;
+  --activities-tab-active: #111010;
+  --activities-club-card-bg: #302122;
+  --activities-nav-bg: #ffffff;
+  --activities-tab-inactive: #4b3435;
 }
-.dark {
+.dark { 
   --bg-color: #111111;
   --text-color: #ffffff;
   --card-bg: #1f2937; 
   --primary: #facc15;
+
+
+  
+  --activities-tab-bg: #f4d03f;
+  --activities-tab-active: #2c1810;
+  --activities-club-card-bg: #302122;
+  --activities-nav-bg: #2a1a1a;
+  --activities-tab-inactive: #ffffff;
 }
 
 body {
