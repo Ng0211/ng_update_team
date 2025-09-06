@@ -310,15 +310,16 @@ function Activities() {
         {/* Navigation buttons */}
         <div className="flex justify-center mx-4 mb-16">
           <div 
-            className="relative rounded-lg p-2 max-w-[800px] w-full shadow-lg border border-gray-200 dark:border-gray-600"
+            className="relative rounded-lg  h-15 max-w-[800px] w-full rounded-lg  "
             style={{ backgroundColor: 'var(--activities-nav-bg)' }}
           >
             <div
-              className="absolute transition-all duration-300 h-10 bottom-3 rounded-lg"
+              className="absolute transition-all duration-300 h-full  rounded-lg"
               style={{
-                width: 'calc(33.333% - 8px)',
+                width: 'calc(33.333% )',
                 transform: `translateX(${sliderPosition}%)`,
-                left: '10px',
+                left : '0px',
+                bottom : '0px',
                 backgroundColor: 'var(--activities-tab-bg)'
               }}
             />
