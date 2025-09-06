@@ -24,11 +24,11 @@
   --text-color-secondary: #ececec;
   --btn-color: #dab900;
 
-  --activities-tab-bg: #9b8a8a;
-  --activities-tab-active: #111010;
+  --activities-tab-bg: rgb(79, 59, 61);
+  --activities-tab-active: #d5b230;
   --activities-club-card-bg: #302122;
   --activities-nav-bg: #ffffff;
-  --activities-tab-inactive: #4b3435;
+  --activities-tab-inactive: #482628;
 }
 .dark { 
   --bg-color: #111111;
@@ -39,7 +39,7 @@
   --text-color-secondary: #26282c;
   --btn-color: #dab900;
 
-  --activities-tab-bg: #f4d03f;
+  --activities-tab-bg: #d5c584;
   --activities-tab-active: #2c1810;
   --activities-club-card-bg: #302122;
   --activities-nav-bg: #2a1a1a;
