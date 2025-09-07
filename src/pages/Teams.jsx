@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../components/ui/Card";
+import TeamCard from "../components/ui/TeamCard";
 import AsheshMishra from "../assets/team/AsheshMishra.jpg"
 import YogeshTillani from "../assets/team/YogeshTillani.jpeg"
 import KeshavKaushik from "../assets/team/KeshavKaushik.jpg"
@@ -52,8 +52,8 @@ function Teams() {
       name: "Keshav Kaushik",
       role: "Aravali SAC Secretary",
       image: KeshavKaushik,
-      email: "xxx.iitd.ac.in",
-      phone: "tel:93939399393",
+      email: "",
+      phone: "",
       instagram: "https://instagram.com/",
       linkedin: "https://sac.iitd.ac.in/ourteam.html#",
       percentageOffset:"20%",
@@ -338,10 +338,10 @@ function Teams() {
       name: "Harsh Parihar",
       role: "Technical Secretary",
       image: HarshParihar,
-      email: "",
-      phone: "",
-      instagram: "",
-      linkedin: "",
+      email: "mailto:tt1230494@iitd.ac.in",
+      phone: "tel:9269511511",
+      instagram: "https://www.instagram.com/nyfikenp007/",
+      linkedin: "https://www.linkedin.com/in/harsh-parihar-7777b6219/",
       percentageOffset:"20%",
 
     },
@@ -349,19 +349,19 @@ function Teams() {
       name: "Prashant Rewar",
       role: "Technical Secretary",
       image: PrashantRewar,
-      email: "",
+      email: "mailto:ph1221859@iitd.ac.in",
       phone: "",
       instagram: "",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/prashant-rewar-b8785225b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "Namisha",
       role: "Design Secretary",
       image: Namisha,
-      email: "",
-      phone: "",
-      instagram: "",
-      linkedin: "",
+      email: "mailto:ms1230061@iitd.ac.in",
+      phone: "tel:9216322036",
+      instagram: "https://www.instagram.com/_nxmisha/",
+      linkedin: "https://www.linkedin.com/in/namisha-chiravdya-1427321b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     
     
@@ -369,37 +369,47 @@ function Teams() {
     
     
   ];
+
+  const DEFAULT_LINKEDIN = "https://www.linkedin.com";
+  const DEFAULT_INSTAGRAM = "https://www.instagram.com";
+
+  const defteam = team.map(person => ({
+    ...person,
+    linkedin: person.linkedin || DEFAULT_LINKEDIN,
+    instagram: person.instagram || DEFAULT_INSTAGRAM,
+  }));
+
   return (
     <div className="container mx-auto p-4 bg-[var(--bg-color)] flex flex-col items-center">
       <div className="w-full flex flex-col items-center">
         <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">SAC Team Members</h1>
         <div className="w-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-evenly justify-items-center m-4">
-          {team.slice(0,2).map((person, idx) => (
-            <Card key={idx} {...person} />
+          {defteam.slice(0,2).map((person, idx) => (
+            <TeamCard key={idx} {...person} />
           ))}
         </div>
       </div>
       <div className="w-full flex flex-col items-center">
         <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Secretaries</h1>
         <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {team.slice(2,16).map((person, idx) => (
-            <Card key={idx} {...person} />
+          {defteam.slice(2,16).map((person, idx) => (
+            <TeamCard key={idx} {...person} />
           ))}
         </div>
       </div>
       <div className="w-full flex flex-col items-center">
         <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Post Graduate Team</h1>
         <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {team.slice(16, 32).map((person, idx) => (
-            <Card key={idx} {...person} />
+          {defteam.slice(16, 32).map((person, idx) => (
+            <TeamCard key={idx} {...person} />
           ))}
         </div>
       </div>
       <div className="w-full flex flex-col items-center">
         <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Design and Tech Team</h1>
         <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {team.slice(32,35).map((person, idx) => (
-            <Card key={idx} {...person} />
+          {defteam.slice(32,35).map((person, idx) => (
+            <TeamCard key={idx} {...person} />
           ))}
         </div>
       </div>

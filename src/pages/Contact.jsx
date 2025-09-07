@@ -41,7 +41,7 @@ function Contact() {
     <div className="flex items-center justify-center bg-[var(--bg-color)] text-[var(--text-color)] p-4 mb-8">
       <form
         onSubmit={handleSubmit}
-        className="bg-white/40 rounded-xl shadow-2xl p-8 w-full max-w-lg mt-8"
+        className="bg-[var(--contact-form-bg)] rounded-xl shadow-2xl p-8 w-full max-w-lg mt-8"
       >
         <h2 className="text-3xl font-bold mb-8 text-left">Contact Us</h2>
         <div className="mb-4">
@@ -49,7 +49,7 @@ function Contact() {
             Name
           </label>
           <input
-            className="w-full px-4 py-2 rounded-md border outline-blue-400 bg-white/60 text-[var(--text-color)]"
+            className="w-full px-4 py-2 rounded-md border outline-blue-400 bg-[var(--contact-form-input-bg)] text-[var(--text-color)]"
             type="text"
             id="name"
             name="name"
@@ -63,7 +63,7 @@ function Contact() {
             Email
           </label>
           <input
-            className="w-full px-4 py-2 rounded-md border bg-white/60 text-[var(--text-color)]"
+            className="w-full px-4 py-2 rounded-md border bg-[var(--contact-form-input-bg)] text-[var(--text-color)]"
             type="email"
             id="email"
             name="email"
@@ -77,7 +77,7 @@ function Contact() {
             Phone Number
           </label>
           <input
-            className="w-full px-4 py-2 rounded-md border bg-white/60 text-[var(--text-color)]"
+            className="w-full px-4 py-2 rounded-md border bg-[var(--contact-form-input-bg)] text-[var(--text-color)]"
             type="tel"
             id="phone"
             name="phone"
@@ -90,7 +90,7 @@ function Contact() {
             Message
           </label>
           <textarea
-            className="w-full px-4 py-2 rounded-md border bg-white/60 min-h-[120px] text-[var(--text-color)]"
+            className="w-full px-4 py-2 rounded-md border bg-[var(--contact-form-input-bg)] min-h-[120px] text-[var(--text-color)]"
             id="message"
             name="message"
             value={form.message}
@@ -101,7 +101,7 @@ function Contact() {
         <button
   type="submit"
   className={`w-full font-semibold py-3 rounded-md transition-colors flex items-center justify-center
-    ${confirmed ? "bg-lime-600 text-white" : "bg-yellow-400 hover:bg-yellow-500 text-black"}
+    ${confirmed ? "bg-[var(--btn-confirmation)] text-[var(--contact-text-hover)]" : "bg-[var(--btn-color)] text-[var(--contact-btn-text)]"}
   `}
   disabled={loading || confirmed}
 >
