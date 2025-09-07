@@ -16,16 +16,35 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --card-bg: #f5f5f5;
+  --bg-color: #f1e6dc;
+  --text-color: #26282c;
+  --text-color-sub: #858585;
+  --card-bg: rgb(48, 33, 34);
   --primary: #3b82f6;
+  --text-color-secondary: #ececec;
+  --btn-color: #dab900;
+
+  --activities-tab-bg: rgb(79, 59, 61);
+  --activities-tab-active: #d5b230;
+  --activities-club-card-bg: #302122;
+  --activities-nav-bg: #ffffff;
+  --activities-tab-inactive: #482628;
 }
-.dark {
+.dark { 
   --bg-color: #111111;
-  --text-color: #ffffff;
+  --text-color: #ececec;
+  --text-color-sub: #858585;
   --card-bg: #1f2937; 
   --primary: #facc15;
+  --text-color-secondary: #26282c;
+  --btn-color: #dab900;
+
+  --activities-tab-bg: #d5c584;
+  --activities-tab-active: #2c1810;
+  --activities-club-card-bg: #302122;
+  --activities-nav-bg: #2a1a1a;
+  --activities-tab-inactive: #ffffff;
+
 }
 
 body {

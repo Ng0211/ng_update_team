@@ -67,4 +67,4 @@ sac-iitd/
 
 1. Follow the established code style and naming conventions
 2. Submit pull requests instead of directly commiting
-3. Keep commits atomic and descriptive
+3. Keep commits atomic and descriptive 

@@ -1,11 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "../contexts/ThemeContext";
+import ClubCard from "../components/ClubCard";
+
+// Import all images
+import backgroundImage from "../assets/activities/background_image.png";
+import iitDelhiImage from "../assets/home/iit_delhi.jpeg";
+import sacLogo from "../assets/home/sac_logo.png";
+import sacCentreImage from "../assets/home/sac_centre_bg_removed.png";
+import bhmLogo from "../assets/home/bhm_logo.png";
+import brcaLogo from "../assets/home/brca.png";
+import bswLogo from "../assets/home/bsw_logo.png";
+import bsaLogo from "../assets/home/bsa.png";
+import bspLogo from "../assets/home/bsp_logo.png";
+import iitdClubsImage from "../assets/home/IITDClubs.png";
 
 function Home() {
-  const [scrolled, setScrolled] = useState(false);
   const { theme } = useTheme();
+  const [typedText, setTypedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,157 +29,198 @@ function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
+  const fullText = "Welcomes You!";
+  const typeSpeed = 60;
+  const deleteSpeed = 50;
+  const deleteDelay = 2000;
+
+  useEffect(() => {
+    let timeout;
+    
+    if (!isDeleting) {
+      if (currentIndex < fullText.length) {
+        timeout = setTimeout(() => {
+          setTypedText(fullText.slice(0, currentIndex + 1));
+          setCurrentIndex(currentIndex + 1);
+        }, typeSpeed);
+      } else {
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, deleteDelay);
+      }
+    } else {
+      if (currentIndex > 0) {
+        timeout = setTimeout(() => {
+          setTypedText(fullText.slice(0, currentIndex - 1));
+          setCurrentIndex(currentIndex - 1);
+        }, deleteSpeed);
+      } else {
+        setIsDeleting(false);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [currentIndex, isDeleting, fullText.length]);
 
   return (
-    <>
-      <div className="min-h-screen relative">
-        {/* Hero Section with Background Image */}
-        <div
-          className="min-h-screen bg-cover bg-center relative flex flex-col items-center justify-center text-white"
-          style={{
-            backgroundImage: `linear-gradient(${
-              theme === "light"
-                ? "rgba(255, 255, 255, 0.8)"
-                : "rgba(0, 0, 0, 0.6)"
-            }, ${
-              theme === "light"
-                ? "rgba(255, 255, 255, 0.8)"
-                : "rgba(0, 0, 0, 0.6)"
-            }), url("/src/assets/iitd-background.jpg")`,
-            backgroundAttachment: "fixed",
-          }}
-        >
-          {/* Overlay */}
-          <div
-            className={`absolute inset-0 bg-gradient-to-b ${
-              theme === "light"
-                ? "from-white/40 to-white/70"
-                : "from-black/40 to-black/70"
-            } z-0`}
-          ></div>
+    <div 
+    className="w-full overflow-hidden main"
+    style={{
+      backgroundImage: theme === 'light' ? `url(${backgroundImage})` : 'none',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundRepeat: 'no-repeat'
+    }}
+    >
+      {/* Hero Section */}
+      <section 
+        className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${iitDelhiImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
 
-          {/* Content */}
-          <div className="container mx-auto px-4 z-10 text-center">
-            <div className="flex flex-col items-center justify-center gap-6">
-              {/* SAC Logo */}
-              <img
-                src="/src/assets/sac_logo.png"
-                alt="SAC Logo"
-                className="w-32 md:w-40 animate-fade-in-down"
-              />
+        <div className="relative z-10 flex flex-col sm:flex-col gap-4 text-center mx-6 sm:mx-[200px] md:py-16 pb-8 px-6 lg:px-12 items-center justify-start">
+          {/* Logo section */}
+          <div className="flex md:mt-[50px] mt-[150px] md:mb-6 sm:mb-0 sm:mr-6">
+            <img 
+              className="w-32 sm:w-40 md:w-48 h-auto object-contain" 
+              src={sacLogo} 
+              alt="SAC Logo" 
+            />
+          </div>
 
-              {/* Main Heading */}
-              <h1
-                className={`text-5xl md:text-7xl font-bold mb-2 tracking-tight animate-fade-in ${
-                  theme === "light" ? "text-gray-900" : "text-white"
-                }`}
-              >
-                Student Affairs Council
-              </h1>
-
-              {/* Subheading */}
-              <h2 className="text-3xl md:text-4xl font-semibold text-yellow-400 mb-8 animate-fade-in">
+          <div className="text-center sm:text-left">
+            <h2 className="text-shadow-md text-3xl md:text-7xl font-extrabold text-gray-300 mb-4 md:mb-2">
+              Student Affairs Council
+            </h2>
+            <div className="text-center flex flex-col justify-center items-center">
+              <p className="text-lg md:text-3xl text-[#FFD700] font-medium">
                 IIT Delhi
-              </h2>
-
-              <div className="w-20 h-1 bg-yellow-400 my-4"></div>
-
-              {/* Welcome Text */}
-              <p
-                className={`text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-fade-in-up ${
-                  theme === "light" ? "text-gray-800" : "text-white"
-                }`}
-              >
-                The Student Affairs Council (SAC) is the apex student body at
-                IIT Delhi, responsible for managing and coordinating all student
-                activities, clubs, and events within the campus.
               </p>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col md:flex-row gap-4 mt-4">
-                <button
-                  onClick={() => {
-                    window.scrollTo({
-                      top: document.documentElement.scrollHeight,
-                      behavior: "smooth",
-                    });
-                  }}
-                  className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-md font-semibold transition-all"
-                >
-                  Learn More
-                </button>
-                <Link
-                  to="/events"
-                  className={`${
-                    theme === "light"
-                      ? "bg-transparent hover:bg-gray-800/20 border-2 border-gray-800 text-gray-900"
-                      : "bg-transparent hover:bg-white/20 border-2 border-white text-white"
-                  } px-8 py-3 rounded-md font-semibold transition-all`}
-                >
-                  Upcoming Events
-                </Link>
+              <hr className="my-4 border-[#FFD700] border-t-2 w-3/4 sm:w-3/4 lg:w-[300px]" />
+              <div className="typed-container">
+                <div className="text-gray-300 text-xl md:text-2xl font-semibold inline-block">
+                  {typedText}
+                  <span className="animate-pulse">|</span>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Scroll Down Indicator */}
-          <div
-            className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer ${
-              scrolled ? "opacity-0" : "opacity-100"
-            } transition-opacity duration-300 ${
-              theme === "light" ? "text-gray-900" : "text-white"
-            }`}
-          >
-            <ChevronDown size={36} />
-          </div>
         </div>
+      </section>
 
-        {/* Additional content can be added below the hero section */}
-        <div className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[var(--text-color)]">
-            Upcoming Events
+      {/* About Section */}
+      <section className="py-12 px-6 lg:px-20 flex flex-col">
+        <div 
+          className="md:w-[900px] py-6 px-4 md:mx-auto shadow-lg rounded-xl"
+          style={{ backgroundColor: 'rgba(43, 26, 24, 0.1)' }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--text-color)]">
+            ABOUT US
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[var(--card-bg)] p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-              <h3 className="text-xl font-semibold mb-2 text-[var(--text-color)]">
-                Annual Cultural Festival
-              </h3>
-              <p className="text-[var(--text-color-light)] mb-4">
-                November 2025
-              </p>
-              <p className="text-[var(--text-color)]">
-                Join us for the biggest cultural extravaganza of the year
-                featuring performances, competitions, and celebrity appearances.
-              </p>
+          <p className="md:text-xl text-center mb-4 text-[var(--text-color)]">
+            Student Affairs Council is the apex student body of IIT Delhi. It is
+            responsible for:
+          </p>
+          <ul className="list-disc list-inside mx-auto space-y-2 max-w-2xl text-[var(--text-color)]">
+            <li>
+              Formulating policies pertaining to all non-academic student
+              affairs.
+            </li>
+            <li>
+              Presenting student views on issues of collective concern through
+              representation in various policy and decision-making bodies.
+            </li>
+            <li>
+              Addressing students' problems through the institutional framework
+              of IIT Delhi.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Three Column Layout */}
+      <div className="container mx-auto   mb-20">
+        <div className="flex flex-wrap">
+          {/* Left Column */}
+          <div className="w-1/4 flex flex-col  gap-5 md:gap-20 scale-[40%] md:scale-100  md:translate-x-0">
+            <ClubCard
+              className="ml-auto"
+              href="https:/home/bhm.iitd.ac.in"
+              imageSrc={bhmLogo}
+              imageAlt="BHM Logo"
+              title="Board for Hostel Management"
+              description="Manages hostel facilities and student accommodation"
+              external={true}
+            />
+            <ClubCard
+              className="ml-auto"
+              href="https://brca.iitd.ac.in"
+              imageSrc={brcaLogo}
+              imageAlt="BRCA Logo"
+              title="Board for Recreational and Creative Activities"
+              description="Organizes cultural and recreational events"
+              external={true}
+            />
+            <ClubCard
+              className="ml-auto"
+              href="https://bsw.iitd.ac.in"
+              imageSrc={bswLogo}
+              imageAlt="BSW Logo"
+              title="Board for Student Welfare"
+              description="Focuses on student well-being and support"
+              external={true}
+            />
+          </div>
+
+          {/* Middle Column */}
+          <div className="w-1/2 flex items-center justify-center m-0 md:p-8 scale-[80%] md:scale-100">
+            <div className="flex flex-col items-center justify-center">
+              <img 
+                src={sacCentreImage} 
+                alt="SAC Centre" 
+                className="w-11/12 h-auto pb-5 max-w-xl"
+              />
             </div>
-            <div className="bg-[var(--card-bg)] p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-              <h3 className="text-xl font-semibold mb-2 text-[var(--text-color)]">
-                Technical Summit
-              </h3>
-              <p className="text-[var(--text-color-light)] mb-4">
-                September 2025
-              </p>
-              <p className="text-[var(--text-color)]">
-                Engage with industry leaders, participate in hackathons, and
-                showcase your technical prowess.
-              </p>
-            </div>
-            <div className="bg-[var(--card-bg)] p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-              <h3 className="text-xl font-semibold mb-2 text-[var(--text-color)]">
-                Sports Meet
-              </h3>
-              <p className="text-[var(--text-color-light)] mb-4">
-                October 2025
-              </p>
-              <p className="text-[var(--text-color)]">
-                Compete in various sports competitions and represent your hostel
-                or department in this annual sporting event.
-              </p>
-            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="w-1/4 flex flex-col gap-5 md:gap-20 scale-[40%] md:scale-100 -translate-x-8 md:translate-x-0">
+            <ClubCard
+              href="https://bsa.iitd.ac.in"
+              imageSrc={bsaLogo}
+              imageAlt="BSA Logo"
+              title="Board for Student Activities"
+              description="Coordinates student activities and events"
+              external={true}
+            />
+            <ClubCard
+              href="https://bsp.iitd.ac.in"
+              imageSrc={bspLogo}
+              imageAlt="BSP Logo"
+              title="Board for Student Publications"
+              description="Manages student publications and media"
+              external={true}
+            />
+            <ClubCard
+              href="/activities"
+              imageSrc={iitdClubsImage}
+              imageAlt="IITD Clubs"
+              title="IIT Delhi Clubs"
+              description="Various student clubs and organizations"
+              external={false}
+            />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

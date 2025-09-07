@@ -6,7 +6,7 @@ function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="bg-[var(--card-bg)] text-[var(--text-color)] p-4 shadow-md">
+    <nav className="overflow-hidden bg-[var(--card-bg)] text-[var(--text-color)] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-xl font-bold">SAC IITD</div>
         <div className="flex items-center">
@@ -21,10 +21,10 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="/events"
+                to="/activities"
                 className="hover:text-[var(--primary)] transition-colors"
               >
-                Events
+                Activities
               </Link>
             </li>
             <li>
