@@ -23,6 +23,15 @@
   --primary: #3b82f6;
   --text-color-secondary: #ececec;
   --btn-color: #dab900;
+  --btn-confirmation: #439600;
+
+  --teams-text-hover:#f0f0f0;
+
+
+  --contact-text-hover: #f0f0f0;
+  --contact-btn-text:black;
+  --contact-form-bg:#d6c6ba;
+  --contact-form-input-bg: #b6a89d;
 
   --activities-tab-bg: rgb(79, 59, 61);
   --activities-tab-active: #d5b230;
@@ -37,7 +46,13 @@
   --card-bg: #1f2937; 
   --primary: #facc15;
   --text-color-secondary: #26282c;
-  --btn-color: #dab900;
+  --btn-color: #b39805;
+  --btn-confirmation: #439600;
+
+  --contact-text-hover: #f0f0f0;
+  --contact-btn-text:black;
+  --contact-form-bg:#1f2937;
+  --contact-form-input-bg: #32435a;
 
   --activities-tab-bg: #d5c584;
   --activities-tab-active: #2c1810;
