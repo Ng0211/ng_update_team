@@ -1,0 +1,6 @@
+<!-- This is a base64 encoded small image of IIT Delhi that will be used as a placeholder until a real image is added -->
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#333"/>
+  <text x="50%" y="50%" font-family="Arial" font-size="42" fill="white" text-anchor="middle">IIT Delhi Campus</text>
+  <text x="50%" y="58%" font-family="Arial" font-size="24" fill="#ccc" text-anchor="middle">Campus Background Image Placeholder</text>
+</svg>
