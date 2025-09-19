@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "../contexts/ThemeContext";
-import ClubCard from "../components/ClubCard";
+import ClubCard from "../components/ui/ClubCard";
 
 // Import all images
 import backgroundImage from "../assets/activities/background_image.png";
@@ -120,7 +120,7 @@ function Home() {
       <section className="py-12 px-6 lg:px-20 flex flex-col">
         <div 
           className="md:w-[900px] py-6 px-4 md:mx-auto shadow-lg rounded-xl"
-          style={{ backgroundColor: 'rgba(43, 26, 24, 0.1)' }}
+          style={{ backgroundColor: 'var(--home-about-bg)' }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--text-color)]">
             ABOUT US
