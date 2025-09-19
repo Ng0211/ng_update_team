@@ -150,7 +150,7 @@ function Home() {
       <div className="container mx-auto   mb-20">
         <div className="flex flex-wrap">
           {/* Left Column */}
-          <div className="w-1/4 flex flex-col  gap-5 md:gap-20 scale-[40%] md:scale-100  md:translate-x-0">
+          <div className="w-1/3 flex flex-col  gap-5 md:gap-20 scale-[40%] md:scale-100  md:translate-x-0">
             <ClubCard
               className="ml-auto"
               href="https:/home/bhm.iitd.ac.in"
@@ -181,7 +181,7 @@ function Home() {
           </div>
 
           {/* Middle Column */}
-          <div className="w-1/2 flex items-center justify-center m-0 md:p-8 scale-[80%] md:scale-100">
+          <div className="w-1/3 flex items-center justify-center m-0 md:p-8 scale-[80%] md:scale-100">
             <div className="flex flex-col items-center justify-center">
               <img 
                 src={sacCentreImage} 
@@ -192,7 +192,7 @@ function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="w-1/4 flex flex-col gap-5 md:gap-20 scale-[40%] md:scale-100 -translate-x-8 md:translate-x-0">
+          <div className="w-1/3 flex flex-col gap-5 md:gap-20 scale-[40%] md:scale-100 -translate-x-8 md:translate-x-0">
             <ClubCard
               href="https://bsa.iitd.ac.in"
               imageSrc={bsaLogo}
