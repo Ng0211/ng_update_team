@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTheme } from "../contexts/ThemeContext";
-import ClubCard from "../components/ClubCard";
+import ClubCard from "../components/ui/ClubCard";
 import { ChevronDown, ExternalLink } from "lucide-react";
-import "../styles/home-animations.css";
 
 // Import all images
 import backgroundImage from "../assets/activities/background_image.png";
@@ -22,6 +22,7 @@ function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,7 +80,7 @@ function Home() {
       <section
         className="relative w-full h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url(${iitDelhiImage})`,
+          // backgroundImage: theme === "light" ? `url(${iitDelhiImage})` : "none",
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
@@ -93,7 +94,7 @@ function Home() {
           <div className="flex md:mt-[40px] mt-[100px] mb-0 sm:mb-0 relative">
             <div className="absolute inset-0 -z-10 bg-[var(--btn-color)]/20 blur-xl rounded-full"></div>
             <img
-              className="w-32 sm:w-44 md:w-52 h-auto object-contain drop-shadow-[0_0_8px_rgba(var(--btn-color-rgb,218,185,0),0.6)] animate-float"
+              className="w-32 sm:w-44 md:w-52 h-auto object-contain drop-shadow-[0_0_8px_rgba(var(--btn-color-rgb),0.6)] animate-float"
               src={sacLogo}
               alt="SAC Logo"
             />
@@ -112,7 +113,6 @@ function Home() {
               <p className="text-xl md:text-4xl text-[var(--btn-color)] font-bold tracking-wide mb-2 animate-slideInFromBottom">
                 IIT Delhi
               </p>
-              
               {/* Decorative divider */}
               <div className="relative flex items-center w-full md:w-2/3 lg:w-[350px] my-6">
                 <div className="flex-grow border-t-2 border-[var(--btn-color)] border-opacity-70"></div>
@@ -120,14 +120,14 @@ function Home() {
                   <span className="inline-block w-3 h-3 bg-[var(--btn-color)] rounded-full animate-pulse"></span>
                 </div>
                 <div className="flex-grow border-t-2 border-[var(--btn-color)] border-opacity-70"></div>
-              </div>              {/* Typed text with improved visibility */}
+              </div>{" "}
+              {/* Typed text with improved visibility */}
               <div className="typed-container bg-[var(--card-bg)]/30 px-6 py-3 rounded-lg backdrop-blur-md">
                 <div className="text-[var(--text-color)] text-xl md:text-2xl font-medium inline-block animate-fadeIn">
                   {typedText}
                   <span className="animate-cursor ml-1">|</span>
                 </div>
               </div>
-
               {/* Mission statement */}
               <p className="mt-6 text-[var(--text-color)] max-w-2xl text-base md:text-lg animate-fadeIn delay-300 hidden md:block">
                 Fostering leadership, creativity, and excellence through
@@ -140,12 +140,7 @@ function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mt-6 mb-8 animate-fadeIn delay-500">
             <button
-              onClick={() => {
-                window.scrollTo({
-                  top: document.getElementById("about-section").offsetTop - 80,
-                  behavior: "smooth",
-                });
-              }}
+              onClick={() => navigate("/about")}
               className="px-8 py-3 bg-gradient-to-r from-[var(--btn-color)] to-[var(--primary)] text-[var(--text-color-secondary)] font-bold rounded-full hover:shadow-[0_0_15px_var(--btn-color)] transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
             >
               <span>Discover SAC</span>
@@ -231,83 +226,13 @@ function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about-section" className="py-16 px-6 lg:px-20 flex flex-col">
-        <div
-          className="md:w-[900px] py-8 px-6 md:mx-auto shadow-xl rounded-xl border border-[var(--btn-color)]/10"
-          style={{
-            backgroundColor: "var(--card-bg)",
-            opacity: 0.9
-          }}
-        >
-          <div className="flex justify-center mb-6">
-            <div className="h-1 w-20 bg-[var(--btn-color)] rounded-full"></div>
-          </div>
-
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-[var(--text-color)] relative">
-            <span
-              className={`relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-1 after:bg-[var(--btn-color)]/50 after:rounded-full`}
-            >
-              ABOUT SAC
-            </span>
-          </h2>
-
-          <p className="md:text-xl text-center mb-6 text-[var(--text-color)] max-w-3xl mx-auto">
-            The Student Affairs Council is the apex student body of IIT Delhi,
-            representing the entire student community and championing their
-            interests. SAC is responsible for:
-          </p>
-
-          <ul className="space-y-4 max-w-2xl mx-auto text-[var(--text-color)] mb-6">
-            <li className="flex items-start">
-              <span className="mr-2 text-yellow-400 mt-1">◆</span>
-              <span>
-                Formulating and implementing policies related to all
-                non-academic student affairs, enriching campus life for every
-                student.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-yellow-400 mt-1">◆</span>
-              <span>
-                Presenting student perspectives on issues of collective concern
-                through active representation in various policy and
-                decision-making bodies.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-yellow-400 mt-1">◆</span>
-              <span>
-                Addressing students' problems effectively through the
-                institutional framework, ensuring their voice is heard and
-                valued.
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="mr-2 text-yellow-400 mt-1">◆</span>
-              <span>
-                Coordinating and supporting all student activities, clubs, and
-                cultural events that enrich campus life and foster community.
-              </span>
-            </li>
-          </ul>
-
-          <div className="text-center">
-            <a
-              href="/about"
-              className="inline-block px-8 py-2 bg-yellow-400/80 text-black font-semibold rounded-full hover:bg-yellow-400 transition-all duration-300"
-            >
-              Learn More About SAC
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* About section moved to dedicated About page */}
 
       {/* Three Column Layout */}
       <div className="container mx-auto   mb-20">
         <div className="flex flex-wrap">
           {/* Left Column */}
-          <div className="w-1/4 flex flex-col  gap-5 md:gap-20 scale-[40%] md:scale-100  md:translate-x-0">
+          <div className="w-1/3 flex flex-col  gap-5 md:gap-20 scale-[40%] md:scale-100  md:translate-x-0">
             <ClubCard
               className="ml-auto"
               href="https:/home/bhm.iitd.ac.in"
@@ -338,7 +263,7 @@ function Home() {
           </div>
 
           {/* Middle Column */}
-          <div className="w-1/2 flex items-center justify-center m-0 md:p-8 scale-[80%] md:scale-100">
+          <div className="w-1/3 flex items-center justify-center m-0 md:p-8 scale-[80%] md:scale-100">
             <div className="flex flex-col items-center justify-center">
               <img
                 src={sacCentreImage}
@@ -349,7 +274,7 @@ function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="w-1/4 flex flex-col gap-5 md:gap-20 scale-[40%] md:scale-100 -translate-x-8 md:translate-x-0">
+          <div className="w-1/3 flex flex-col gap-5 md:gap-20 scale-[40%] md:scale-100 -translate-x-8 md:translate-x-0">
             <ClubCard
               href="https://bsa.iitd.ac.in"
               imageSrc={bsaLogo}

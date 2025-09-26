@@ -23,6 +23,26 @@
   --primary: #3b82f6;
   --text-color-secondary: #ececec;
   --btn-color: #dab900;
+  --btn-color-rgb: 218, 185, 0; /* rgb equivalent of --btn-color for effects */
+  --btn-text-color: #26282c;
+  --btn-confirmation: #439600;
+  /* Text color that sits on top of primary color, varies by theme */
+  --on-primary: #ffffff;
+
+  /* High-contrast surfaces for structural UI like navbar/footer */
+  --navbar-bg: #ffffff;
+  --navbar-text: #26282c;
+  --footer-bg: #ffffff;
+  --footer-text: #26282c;
+
+  --teams-text-hover: #f0f0f0;
+
+  --contact-text-hover: #f0f0f0;
+  --contact-btn-text: black;
+  --contact-form-bg: #d6c6ba;
+  --contact-form-input-bg: #b6a89d;
+
+  --home-about-bg: rgba(43, 26, 24, 0.1);
 
   --activities-tab-bg: rgb(79, 59, 61);
   --activities-tab-active: #d5b230;
@@ -30,24 +50,42 @@
   --activities-nav-bg: #ffffff;
   --activities-tab-inactive: #482628;
 }
-.dark { 
+.dark {
   --bg-color: #111111;
   --text-color: #ececec;
   --text-color-sub: #858585;
-  --card-bg: #1f2937; 
+  --card-bg: rgb(48, 33, 34);
   --primary: #facc15;
   --text-color-secondary: #26282c;
-  --btn-color: #dab900;
+  --btn-color: #b39805;
+  --btn-color-rgb: 179, 152, 5; /* rgb equivalent of --btn-color for effects */
+  --btn-text-color: #111111;
+  --btn-confirmation: #439600;
+  /* On yellow primary, a dark text works best in dark theme */
+  --on-primary: #111111;
+
+  /* High-contrast surfaces in dark mode */
+  --navbar-bg: #121212;
+  --navbar-text: #ececec;
+  --footer-bg: #121212;
+  --footer-text: #ececec;
+
+  --contact-text-hover: #f0f0f0;
+  --contact-btn-text: black;
+  --contact-form-bg: #1f2937;
+  --contact-form-input-bg: #32435a;
 
   --activities-tab-bg: #d5c584;
   --activities-tab-active: #2c1810;
   --activities-club-card-bg: #302122;
   --activities-nav-bg: #2a1a1a;
   --activities-tab-inactive: #ffffff;
-
+  --home-about-bg: rgba(255, 255, 255, 0.05);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }

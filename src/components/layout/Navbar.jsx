@@ -6,7 +6,7 @@ function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="overflow-hidden bg-[var(--card-bg)] text-[var(--text-color)] p-4 shadow-md">
+    <nav className="overflow-hidden bg-[var(--navbar-bg)] text-[var(--navbar-text)] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-xl font-bold">SAC IITD</div>
         <div className="flex items-center">
@@ -17,6 +17,14 @@ function Navbar() {
                 className="hover:text-[var(--primary)] transition-colors"
               >
                 Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="hover:text-[var(--primary)] transition-colors"
+              >
+                About
               </Link>
             </li>
             <li>
@@ -46,7 +54,7 @@ function Navbar() {
           </ul>
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-[var(--primary)] text-[var(--bg-color)]"
+            className="p-2 rounded-full bg-[var(--primary)] text-[var(--on-primary)]"
             aria-label={`Switch to ${
               theme === "light" ? "dark" : "light"
             } mode`}
