@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 function ClubCard({
   href,
   imageSrc,
@@ -8,6 +9,7 @@ function ClubCard({
   description,
   external = false,
   className = "",
+
 }) {
   const [showTooltip, setShowTooltip] = useState(false);
 

@@ -40,6 +40,14 @@
   --contact-text-hover: #f0f0f0;
   --contact-btn-text: black;
   --contact-form-bg: #d6c6ba;
+  --btn-confirmation: #439600;
+
+  --teams-text-hover:#f0f0f0;
+
+
+  --contact-text-hover: #f0f0f0;
+  --contact-btn-text:black;
+  --contact-form-bg:#d6c6ba;
   --contact-form-input-bg: #b6a89d;
 
   --home-about-bg: rgba(43, 26, 24, 0.1);
@@ -73,6 +81,11 @@
   --contact-text-hover: #f0f0f0;
   --contact-btn-text: black;
   --contact-form-bg: #1f2937;
+  --btn-confirmation: #439600;
+
+  --contact-text-hover: #f0f0f0;
+  --contact-btn-text:black;
+  --contact-form-bg:#1f2937;
   --contact-form-input-bg: #32435a;
 
   --activities-tab-bg: #d5c584;

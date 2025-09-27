@@ -4,6 +4,7 @@ import { useTheme } from "../contexts/ThemeContext";
 import ClubCard from "../components/ui/ClubCard";
 import { ChevronDown, ExternalLink } from "lucide-react";
 
+
 // Import all images
 import backgroundImage from "../assets/activities/background_image.png";
 import iitDelhiImage from "../assets/home/iit_delhi.jpeg";
@@ -136,7 +137,6 @@ function Home() {
               </p>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mt-6 mb-8 animate-fadeIn delay-500">
             <button
