@@ -23,11 +23,11 @@ function ProjectCard({
         </p>
       )}
       {children}
-      {/* <div className="mt-4">
+      <div className="mt-4">
         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--btn-color)] text-[var(--text-color-secondary)] font-medium hover:brightness-110 transition">
           {ctaLabel}
         </span>
-      </div> */}
+      </div>
     </div>
   );
 
