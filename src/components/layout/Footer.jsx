@@ -1,14 +1,15 @@
 import { Instagram, Linkedin, Globe, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import sacLogo from "../../assets/home/sac_logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a0d0d] text-white py-10 px-6">
+    <footer className="bg-[var(--footer-bg)] text-[var(--footer-text)] py-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Left Logo Section */}
         <div className="space-y-4">
-          <img src="/src/assets/sac_logo.png" alt="SAC Logo" className="w-32" />
-          <button className="bg-yellow-400 text-black px-4 py-2 rounded-md font-semibold">
+          <img src={sacLogo} alt="SAC Logo" className="w-32" />
+          <button className="bg-[var(--btn-color)] text-[var(--btn-text-color)] px-4 py-2 rounded-md font-semibold hover:brightness-110 transition">
             <Link to="/contact">Get in Touch</Link>
           </button>
           <div className="flex items-center gap-2 text-sm">
@@ -107,7 +108,7 @@ export default function Footer() {
                   >
                     <Instagram
                       size={16}
-                      className="text-pink-500 hover:text-pink-400"
+                      className="text-[var(--text-color)] hover:text-[var(--primary)]"
                     />
                   </a>
                   <a
@@ -117,13 +118,13 @@ export default function Footer() {
                   >
                     <Linkedin
                       size={16}
-                      className="text-blue-500 hover:text-blue-400"
+                      className="text-[var(--text-color)] hover:text-[var(--primary)]"
                     />
                   </a>
                   <a href={body.web} target="_blank" rel="noopener noreferrer">
                     <Globe
                       size={16}
-                      className="text-gray-300 hover:text-white"
+                      className="text-[var(--text-color)] hover:text-[var(--primary)]"
                     />
                   </a>
                 </div>
@@ -241,6 +242,16 @@ export default function Footer() {
                 className="hover:underline"
               >
                 SAC Main Website
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/1neqeZwx5WbMhokLcd95NMgKGjg-R_eag33KOWx9_Ofs/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Student Insurance Policy IITD
               </a>
             </li>
           </ul>

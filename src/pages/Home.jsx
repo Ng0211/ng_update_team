@@ -117,7 +117,7 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 px-6 lg:px-20 flex flex-col">
+      {/* <section className="py-12 px-6 lg:px-20 flex flex-col">
         <div 
           className="md:w-[900px] py-6 px-4 md:mx-auto shadow-lg rounded-xl"
           style={{ backgroundColor: 'var(--home-about-bg)' }}
@@ -144,10 +144,10 @@ function Home() {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       {/* Three Column Layout */}
-      <div className="container mx-auto   mb-20">
+      <div className="container mx-auto   mb-20 pt-10">
         <div className="flex flex-wrap">
           {/* Left Column */}
           <div className="w-1/3 flex flex-col  gap-5 md:gap-20 scale-[40%] md:scale-100  md:translate-x-0">
