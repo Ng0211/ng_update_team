@@ -243,6 +243,16 @@ export default function Footer() {
                 SAC Main Website
               </a>
             </li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/1neqeZwx5WbMhokLcd95NMgKGjg-R_eag33KOWx9_Ofs/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Student Insurance Policy IITD
+              </a>
+            </li>
           </ul>
         </div>
       </div>
