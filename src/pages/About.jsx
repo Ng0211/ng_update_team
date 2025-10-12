@@ -7,7 +7,7 @@ function About() {
     <div className="py-12 px-6 lg:px-20 flex flex-col">
       <div
         className="md:w-[900px] py-6 px-4 md:mx-auto shadow-lg rounded-xl"
-        style={{ backgroundColor: "var(--home-about-bg)" }}
+        style={{ backgroundColor: "var(--contact-form-bg)" }}
       >
         <div className="flex justify-center mb-6">
           <div className="h-1 w-20 bg-[var(--btn-color)] rounded-full"></div>
@@ -31,7 +31,7 @@ function About() {
 
         {/* Constitution card with yellow button */}
         <div className="flex justify-center mb-8">
-          <div className="bg-[var(--card-bg)]/60 backdrop-blur px-3 py-2 rounded-xl shadow">
+          <div className="bg-[var(--contact-form-input-bg)] px-3 py-2 rounded-xl shadow">
             <a
               href="https://docs.google.com/document/d/1zk5mOgtTPKKUOkTyEVD04JkSrCLyUBwN/export?format=pdf"
               className="inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-[var(--btn-color)] text-[var(--contact-btn-text)] font-semibold rounded-lg transition-colors duration-200 shadow-md hover:brightness-110"
@@ -83,7 +83,7 @@ function About() {
       {/* Separate Projects Card */}
       <div
         className="md:w-[900px] py-8 px-4 md:mx-auto shadow-lg rounded-xl mt-16"
-        style={{ backgroundColor: "var(--home-about-bg)" }}
+        style={{ backgroundColor: "var(--contact-form-bg)" }}
       >
         <section>
           <div className="flex justify-center mb-6">
