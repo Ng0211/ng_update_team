@@ -44,10 +44,11 @@ export default function Footer() {
 
         {/* Constituent Bodies */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">
+          <h3 className="text-lg font-semibold mb-1">
             Constituent Bodies of SAC
           </h3>
-          <ul className="space-y-2">
+          <hr></hr>
+          <ul className="space-y-2 mt-2">
             {[
               {
                 name: "BHM",
@@ -108,7 +109,7 @@ export default function Footer() {
                   >
                     <Instagram
                       size={16}
-                      className="text-[var(--text-color)] hover:text-[var(--primary)]"
+                      className="text-[var(--footer-text)] hover:brightness-110"
                     />
                   </a>
                   <a
@@ -118,13 +119,13 @@ export default function Footer() {
                   >
                     <Linkedin
                       size={16}
-                      className="text-[var(--text-color)] hover:text-[var(--primary)]"
+                      className="text-[var(--footer-text)] hover:brightness-110"
                     />
                   </a>
                   <a href={body.web} target="_blank" rel="noopener noreferrer">
                     <Globe
                       size={16}
-                      className="text-[var(--text-color)] hover:text-[var(--primary)]"
+                      className="text-[var(--footer-text)] hover:brightness-110"
                     />
                   </a>
                 </div>
@@ -135,8 +136,9 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Services</h3>
-          <ul className="space-y-2">
+          <h3 className="text-lg font-semibold mb-1">Services</h3>
+          <hr></hr>
+          <ul className="space-y-2 mt-2">
             <li>
               <a
                 href="https://csc.iitd.ac.in"
@@ -192,8 +194,9 @@ export default function Footer() {
 
         {/* Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Links</h3>
-          <ul className="space-y-2">
+          <h3 className="text-lg font-semibold mb-1">Links</h3>
+          <hr></hr>
+          <ul className="space-y-2 mt-2">
             <li>
               <a
                 href="https://academics.iitd.ac.in/ecertification"

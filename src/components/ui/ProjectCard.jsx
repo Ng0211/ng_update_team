@@ -11,20 +11,20 @@ function ProjectCard({
 }) {
   const content = (
     <div
-      className={`bg-[var(--card-bg)]/70 backdrop-blur rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200 ${className}`}
-      style={{ border: "1px solid rgba(0,0,0,0)" }}
+      className={`rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200 h-80 md:h-[26rem] flex flex-col ${className}`}
+      style={{ backgroundColor: "var(--contact-form-input-bg)" }}
     >
       <h3 className="text-lg font-semibold text-[var(--text-color)] mb-2">
         {title}
       </h3>
       {description && (
-        <p className="text-sm text-[var(--text-color-sub)] mb-4">
+        <div className="text-sm text-[var(--text-color)] mb-4 overflow-auto pr-1 flex-1">
           {description}
-        </p>
+        </div>
       )}
       {children}
       <div className="mt-4">
-        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--btn-color)] text-[var(--text-color-secondary)] font-medium hover:brightness-110 transition">
+        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--btn-color)] text-[var(--contact-btn-text)] font-medium hover:brightness-110 transition">
           {ctaLabel}
         </span>
       </div>
@@ -37,7 +37,7 @@ function ProjectCard({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="block"
+        className="block h-full"
         aria-label={`${title} - ${ctaLabel}`}
       >
         {content}
@@ -46,7 +46,11 @@ function ProjectCard({
   }
 
   return (
-    <a href={href} className="block" aria-label={`${title} - ${ctaLabel}`}>
+    <a
+      href={href}
+      className="block h-full"
+      aria-label={`${title} - ${ctaLabel}`}
+    >
       {content}
     </a>
   );

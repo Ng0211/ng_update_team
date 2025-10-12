@@ -6,14 +6,12 @@ import { Sun, Moon } from "lucide-react";
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
-
   const linkTextClass =
     theme === "light"
       ? "text-[var(--text-color-secondary)]"
       : "text-[var(--text-color)]";
   const linkClass = `${linkTextClass} hover:text-[var(--primary)] transition-colors`;
   const brandClass = `${linkTextClass} text-xl font-bold`;
-
   return (
     <nav className="overflow-hidden bg-[var(--card-bg)] p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
