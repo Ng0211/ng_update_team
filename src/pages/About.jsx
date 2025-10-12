@@ -1,8 +1,58 @@
-import React from "react";
-import { DownloadCloud } from "lucide-react";
+import React, { useRef, useState } from "react";
+import { DownloadCloud, ChevronLeft, ChevronRight, X } from "lucide-react";
 import ProjectCard from "../components/ui/ProjectCard";
 
 function About() {
+  const years = [
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+  ];
+  const mmScrollRef = useRef(null);
+  const [selectedYear, setSelectedYear] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Distinct sample dates per academic year (replace hrefs with real links later)
+  const meetingData = {
+    "2018-19": [
+      { date: "11 MAY'18", href: "https://drive.google.com/file/d/1-ehc_jiBitQBdPt4peR7MggiUIELBgyd/view" },
+      { date: "14 SEPTEMBER'18", href: "https://drive.google.com/file/d/1OecrMJJqMMpTsvUuGqdqZfATYdlbxSwv/view" },
+      { date: "26 NOVEMBER'18", href: "https://drive.google.com/file/d/1Xnp8O5IEjTxH7MeQdyiqI9CFyVZ7Mhkv/view" },
+      { date: "21 FEBRUARY'19", href: "https://drive.google.com/file/d/1WzRC9Fcrmfh_xKl9Cg0G8-U48wsnZV2n/view" },
+    ],
+    "2019-20": [
+      { date: "25 APRIL'19", href: "https://drive.google.com/file/d/14WNbreCcXOqj5meUYspVMxpq_ZoJSQ8i/view" },
+      { date: "20 SEPTEMBER'19", href: "https://drive.google.com/file/d/1Vz6EYPo4yjxG5Xwpps6buTYu8aOZ92kW/view" },
+      { date: "22 JANUARY'20", href: "https://drive.google.com/file/d/1Vz6EYPo4yjxG5Xwpps6buTYu8aOZ92kW/view" },
+    ],
+    "2020-21": [
+      { date: "17 DECEMBER'20", href: "https://docs.google.com/document/d/10CNKCLgVJvW46bJWk3aT4hhMzRGFIRkgMD8ztDXaS2w/edit?tab=t.0" },
+      { date: "1 APRIL'21", href: "https://drive.google.com/file/d/1fFRxOaI6fNJnb2gBq9qyeV75wUYtsPSf/view?usp=sharing" },
+    ],
+    "2021-22": [
+      { date: "17 DECEMBER'21", href: "https://drive.google.com/file/d/1KiyfbVUQ6y9Sd5TAqvH5u0BbDDa_uNPF/view?usp=sharing" },
+    ],
+    "2022-23": [
+      { date: "23 JANUARY'23", href: "https://docs.google.com/document/u/0/d/1vc_QzlnpcbMSa7UrbWa_B9w5yjvbYWTeWFbEGRHMUlg/mobilebasic" },
+      { date: "5 APRIL'23", href: "https://docs.google.com/document/d/1u7umIL-xEBEPvajEuY9YK4FKfI51c1pzp9V1oS0tAmI/edit" },
+    ],
+    "2023-24": [
+      { date: "29 NOVEMBER'23", href: "https://docs.google.com/document/d/1rcVadhGeAQYZqaa2Fx68LSaycSVtsez0-Qpy0BsDbnE/edit" },
+      { date: "20 MARCH'24", href: "https://drive.google.com/file/d/1jokDftXRXSz7PpgJJItHzMew4g27b-Cd/view?usp=sharing" },
+    ],
+    "2024-25": [
+      { date: "6 NOVEMBER'24", href: "https://drive.google.com/file/d/1h1FLPHYTti1Y3FBsyMAK8ByM28pI0aKa/view?usp=sharing" },
+    ],
+  };
+
+  const scrollByAmount = (amount) => {
+    if (!mmScrollRef.current) return;
+    mmScrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
+  };
   return (
     <div className="py-12 px-6 lg:px-20 flex flex-col">
       <div
@@ -133,6 +183,122 @@ function About() {
           </div>
         </section>
       </div>
+
+      {/* Minutes of Meetings Section */}
+      <div
+        className="md:w-[900px] py-8 px-4 md:mx-auto shadow-lg rounded-xl mt-16"
+        style={{ backgroundColor: "var(--contact-form-bg)" }}
+      >
+        <section>
+          <div className="flex justify-center mb-6">
+            <div className="h-1 w-20 bg-[var(--btn-color)] rounded-full"></div>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[var(--text-color)]">
+            Minutes of Meetings
+          </h2>
+          <div className="relative">
+            {/* Left Button */}
+            <button
+              type="button"
+              onClick={() => scrollByAmount(-300)}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-[var(--btn-color)] text-[var(--contact-btn-text)] shadow hover:brightness-110"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft size={18} />
+            </button>
+
+            {/* Scroll Container */}
+            <div
+              ref={mmScrollRef}
+              className="overflow-x-auto no-scrollbar px-10"
+            >
+              <div className="flex gap-4">
+                {years.map((y) => (
+                  <button
+                    key={y}
+                    type="button"
+                    onClick={() => {
+                      setSelectedYear(y);
+                      setIsModalOpen(true);
+                    }}
+                    className="min-w-[9rem] text-center px-4 py-3 md:py-4 rounded-lg shadow bg-[var(--btn-color)] text-[var(--contact-btn-text)] hover:brightness-110 transition font-semibold"
+                    aria-label={`Open minutes for ${y}`}
+                  >
+                    {y}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Button */}
+            <button
+              type="button"
+              onClick={() => scrollByAmount(300)}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-[var(--btn-color)] text-[var(--contact-btn-text)] shadow hover:brightness-110"
+              aria-label="Scroll right"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </div>
+        </section>
+      </div>
+      {isModalOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mm-title"
+          className="fixed inset-0 z-50 flex items-center justify-center"
+        >
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setIsModalOpen(false)}
+          />
+          {/* Modal content */}
+          <div
+            className="relative z-10 w-11/12 max-w-4xl rounded-xl shadow-lg p-6"
+            style={{ backgroundColor: "var(--contact-form-bg)" }}
+          >
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(false)}
+              aria-label="Close"
+              className="absolute right-3 top-3 p-1 rounded-full hover:brightness-110"
+              style={{ backgroundColor: "var(--contact-form-input-bg)" }}
+            >
+              <X className="w-5 h-5 text-[var(--text-color)]" />
+            </button>
+            <h3
+              id="mm-title"
+              className="text-xl md:text-2xl font-bold text-center mb-6 text-[var(--text-color)]"
+            >
+              Minutes of Meetings — {selectedYear}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {(meetingData[selectedYear] || []).map((m, idx) => (
+                <div
+                  key={idx}
+                  className="rounded-lg shadow p-5 text-center"
+                  style={{ backgroundColor: "var(--btn-color)" }}
+                >
+                  <div className="font-extrabold tracking-wide text-[var(--contact-btn-text)]">
+                    {m.date.toUpperCase()}
+                  </div>
+                  <a
+                    href={m.href}
+                    className="mt-3 inline-block underline"
+                    style={{ color: "var(--btn-confirmation)" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    See Details
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
