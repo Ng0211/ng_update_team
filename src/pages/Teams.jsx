@@ -25,6 +25,9 @@ import HarshParihar from "../assets/team/HarshParihar.jpg"
 import PrashantRewar from "../assets/team/PrashantRewar.jpg"
 import Namisha from "../assets/team/Namisha.jpg"
 import GopalPrasadPatel from "../assets/team/GopalPrasadPatel.jpg"
+import RahulKumar from "../assets/team/RahulKumar.jpg"
+import VivekKushwah from "../assets/team/VivekKushwah.jpg"
+// import HarshitKothari from "../assets/team/HarshitKothari.png"
 // ...add more imports here for each image in assets/team...
 // ...existing code...
 
@@ -363,11 +366,33 @@ function Teams() {
       instagram: "https://www.instagram.com/_nxmisha/",
       linkedin: "https://www.linkedin.com/in/namisha-chiravdya-1427321b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
-    
-    
-    
-    
-    
+    {
+      name: "Rahul Kumar",
+      role: "Technical Executive",
+      image: RahulKumar,
+      email: "mailto:ce1240049@iitd.ac.in",
+      phone: "",
+      instagram: "https://www.instagram.com/rahul_kumar87127/",
+      linkedin: "https://www.linkedin.com/in/rahul-kumar-iitd/",
+    },
+    {
+      name: "Soumyavardhan Maheshwari",
+      role: "Technical Executive",
+      image: defaultImage,
+      email: "mailto:ce1240049@iitd.ac.in",
+      phone: "",
+      instagram: "https://www.instagram.com/soumyavardhan_maheshwari/",
+      linkedin: "https://www.linkedin.com/in/soumyavardhan-maheshwari-66b74226a/",
+    },
+    {
+      name: "Vivek Kushwah ",
+      role: "Technical Executive",
+      image: VivekKushwah,
+      email: "mailto:ce1240049@iitd.ac.in",
+      phone: "",
+      instagram: "https://www.instagram.com/vivek_kushwah9387?igsh=cnh6bzlxMnBqejRi",
+      linkedin: "https://www.linkedin.com/in/vivek-kushwah-7467bb326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
   ];
 
   const DEFAULT_LINKEDIN = "https://www.linkedin.com";
@@ -408,7 +433,7 @@ function Teams() {
       <div className="w-full flex flex-col items-center">
         <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Design and Tech Team</h1>
         <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {defteam.slice(32,35).map((person, idx) => (
+          {defteam.slice(32,38).map((person, idx) => (
             <TeamCard key={idx} {...person} />
           ))}
         </div>

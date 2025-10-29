@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 function ClubCard({
   href,
   imageSrc,
@@ -9,20 +8,19 @@ function ClubCard({
   description,
   external = false,
   className = "",
-
 }) {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const cardContent = (
     <div
-      className={`bg-[var(--activities-club-card-bg)] p-4 rounded-lg w-48 h-48 flex items-center justify-center hover:transform hover:scale-105 transition-transform duration-300 relative ${className}`}
+      className={`bg-[var(--activities-club-card-bg)] p-4 rounded-lg w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 max-w-full flex items-center justify-center hover:transform hover:scale-105 transition-transform duration-300 relative ${className}`}
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
       <img
         src={imageSrc}
         alt={imageAlt}
-        className="w-auto h-full object-contain"
+        className="max-w-full max-h-full object-contain"
       />
 
       {/* Tooltip */}
