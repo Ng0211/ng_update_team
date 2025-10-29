@@ -29,7 +29,7 @@ function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   const fullText = "Welcomes You!";
   const typeSpeed = 60;
   const deleteSpeed = 50;
@@ -37,7 +37,7 @@ function Home() {
 
   useEffect(() => {
     let timeout;
-    
+
     if (!isDeleting) {
       if (currentIndex < fullText.length) {
         timeout = setTimeout(() => {
@@ -64,23 +64,23 @@ function Home() {
   }, [currentIndex, isDeleting, fullText.length]);
 
   return (
-    <div 
-    className="w-full overflow-hidden main"
-    style={{
-      backgroundImage: theme === 'light' ? `url(${backgroundImage})` : 'none',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
-      backgroundRepeat: 'no-repeat'
-    }}
+    <div
+      className="w-full overflow-hidden main"
+      style={{
+        backgroundImage: theme === "light" ? `url(${backgroundImage})` : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       {/* Hero Section */}
-      <section 
+      <section
         className="relative w-full h-screen flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url(${iitDelhiImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {/* Dark Overlay */}
@@ -89,24 +89,24 @@ function Home() {
         <div className="relative z-10 flex flex-col sm:flex-col gap-4 text-center mx-6 sm:mx-[200px] md:py-16 pb-8 px-6 lg:px-12 items-center justify-start">
           {/* Logo section */}
           <div className="flex md:mt-[50px] mt-[150px] md:mb-6 sm:mb-0 sm:mr-6">
-            <img 
-              className="w-32 sm:w-40 md:w-48 h-auto object-contain" 
-              src={sacLogo} 
-              alt="SAC Logo" 
+            <img
+              className="w-32 sm:w-40 md:w-48 h-auto object-contain"
+              src={sacLogo}
+              alt="SAC Logo"
             />
           </div>
 
           <div className="text-center sm:text-left">
-            <h2 className="text-shadow-md text-3xl md:text-7xl font-extrabold text-gray-300 mb-4 md:mb-2">
+            <h2 className="text-shadow-md text-2xl sm:text-4xl md:text-7xl font-extrabold text-gray-300 mb-4 md:mb-2">
               Student Affairs Council
             </h2>
             <div className="text-center flex flex-col justify-center items-center">
-              <p className="text-lg md:text-3xl text-[#FFD700] font-medium">
+              <p className="text-base sm:text-xl md:text-3xl text-[#FFD700] font-medium">
                 IIT Delhi
               </p>
               <hr className="my-4 border-[#FFD700] border-t-2 w-3/4 sm:w-3/4 lg:w-[300px]" />
               <div className="typed-container">
-                <div className="text-gray-300 text-xl md:text-2xl font-semibold inline-block">
+                <div className="text-gray-300 text-lg sm:text-xl md:text-2xl font-semibold inline-block">
                   {typedText}
                   <span className="animate-pulse">|</span>
                 </div>
@@ -147,10 +147,10 @@ function Home() {
       </section> */}
 
       {/* Three Column Layout */}
-      <div className="container mx-auto   mb-20 pt-10">
-        <div className="flex flex-wrap">
+      <div className="container mx-auto mb-20 pt-10 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Left Column */}
-          <div className="w-1/3 flex flex-col  gap-5 md:gap-20 scale-[40%] md:scale-100  md:translate-x-0">
+          <div className="w-full md:w-auto flex flex-col gap-5 md:gap-20">
             <ClubCard
               className="ml-auto"
               href="https:/home/bhm.iitd.ac.in"
@@ -181,18 +181,18 @@ function Home() {
           </div>
 
           {/* Middle Column */}
-          <div className="w-1/3 flex items-center justify-center m-0 md:p-8 scale-[80%] md:scale-100">
+          <div className="w-full md:w-auto flex items-center justify-center m-0 md:p-8">
             <div className="flex flex-col items-center justify-center">
-              <img 
-                src={sacCentreImage} 
-                alt="SAC Centre" 
-                className="w-11/12 h-auto pb-5 max-w-xl"
+              <img
+                src={sacCentreImage}
+                alt="SAC Centre"
+                className="w-full max-w-md md:max-w-xl h-auto pb-5"
               />
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="w-1/3 flex flex-col gap-5 md:gap-20 scale-[40%] md:scale-100 -translate-x-8 md:translate-x-0">
+          <div className="w-full md:w-auto flex flex-col gap-5 md:gap-20">
             <ClubCard
               href="https://bsa.iitd.ac.in"
               imageSrc={bsaLogo}

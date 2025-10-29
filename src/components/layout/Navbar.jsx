@@ -1,26 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 import sacLogo from "../../assets/sac_logo.png";
 import { Sun, Moon } from "lucide-react";
 
 function Navbar() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const { theme, toggleTheme } = useTheme();
   const linkTextClass =
     theme === "light"
       ? "text-[var(--text-color-secondary)]"
       : "text-[var(--text-color)]";
-  const linkClass = `${linkTextClass} hover:text-[var(--primary)] transition-colors`;
-  const brandClass = `${linkTextClass} text-xl font-bold`;
+  const linkClass = `${linkTextClass} hover:text-[var(--primary)] transition-colors text-sm sm:text-base`;
+  const brandClass = `${linkTextClass} text-lg sm:text-xl font-bold`;
   return (
-    <nav className="overflow-hidden bg-[var(--card-bg)] p-4 shadow-md">
+    <nav
+      className={`overflow-hidden bg-[var(--card-bg)] p-4 shadow-md ${
+        isHome ? "sticky top-0 z-50" : ""
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img src={sacLogo} alt="SAC Logo" className="h-8 w-auto" />
           <span className={brandClass}>SAC IITD</span>
         </div>
         <div className="flex items-center">
-          <ul className="flex space-x-4 mr-4">
+          <ul className="flex flex-wrap gap-x-4 gap-y-2 mr-4">
             <li>
               <Link to="/" className={linkClass}>
                 Home
@@ -59,18 +65,16 @@ function Navbar() {
                 : "bg-[var(--primary)]/50"
             }`}
           >
-            {/* Sun/Moon indicators */}
+            {/* Sun/Moon indicators (smaller on mobile) */}
             <Sun
-              size={14}
               aria-hidden="true"
-              className={`absolute left-1 pointer-events-none transition-opacity duration-300 text-[var(--text-color-secondary)] ${
+              className={`absolute left-1 pointer-events-none transition-opacity duration-300 text-[var(--text-color-secondary)] w-3 h-3 sm:w-3.5 sm:h-3.5 ${
                 theme === "light" ? "opacity-100" : "opacity-30"
               }`}
             />
             <Moon
-              size={14}
               aria-hidden="true"
-              className={`absolute right-1 pointer-events-none transition-opacity duration-300 text-[var(--text-color-secondary)] ${
+              className={`absolute right-1 pointer-events-none transition-opacity duration-300 text-[var(--text-color-secondary)] w-3 h-3 sm:w-3.5 sm:h-3.5 ${
                 theme === "dark" ? "opacity-100" : "opacity-30"
               }`}
             />

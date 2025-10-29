@@ -107,26 +107,17 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Instagram
-                      size={16}
-                      className="text-[var(--footer-text)] hover:brightness-110"
-                    />
+                    <Instagram className="text-[var(--footer-text)] hover:brightness-110 w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                   <a
                     href={body.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Linkedin
-                      size={16}
-                      className="text-[var(--footer-text)] hover:brightness-110"
-                    />
+                    <Linkedin className="text-[var(--footer-text)] hover:brightness-110 w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                   <a href={body.web} target="_blank" rel="noopener noreferrer">
-                    <Globe
-                      size={16}
-                      className="text-[var(--footer-text)] hover:brightness-110"
-                    />
+                    <Globe className="text-[var(--footer-text)] hover:brightness-110 w-4 h-4 sm:w-5 sm:h-5" />
                   </a>
                 </div>
               </li>
