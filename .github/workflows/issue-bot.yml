@@ -1,0 +1,9 @@
+name: Issue Bot
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  bot:
+    uses: sac-iitd/.github/.github/workflows/issue-bot.yml@master
