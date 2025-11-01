@@ -5,5 +5,63 @@ on:
     types: [created]
 
 jobs:
-  bot:
-    uses: sac-iitd/.github/.github/workflows/issue-bot.yml@master
+  handle_comment:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+
+    steps:
+      - name: Process /assign and /unassign commands
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = context.payload.comment.body.trim().toLowerCase();
+            const issue = context.payload.issue;
+            const user = context.payload.comment.user.login;
+            const issue_number = issue.number;
+
+            const { owner, repo } = context.repo;
+
+            async function reply(msg) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number,
+                body: msg
+              });
+            }
+
+            if (comment === '/assign') {
+              if (issue.assignees.some(a => a.login === user)) {
+                await reply(`⚠️ @${user}, you’re already assigned to this issue.`);
+                return;
+              }
+
+              if (issue.assignees.length > 0) {
+                const assignedUsers = issue.assignees.map(a => `@${a.login}`).join(', ');
+                await reply(`❌ Sorry @${user}, this issue is already reserved by ${assignedUsers}.`);
+                return;
+              }
+
+              await github.rest.issues.addAssignees({ owner, repo, issue_number, assignees: [user] });
+              await reply(`✅ @${user} has been assigned to this issue. Happy coding!`);
+              console.log(`Assigned ${user} to issue #${issue_number}`);
+              return;
+            }
+
+            if (comment === '/unassign') {
+              const assigned = issue.assignees.map(a => a.login);
+              if (!assigned.includes(user)) {
+                await reply(`⚠️ @${user}, you’re not currently assigned to this issue.`);
+                return;
+              }
+
+              await github.rest.issues.removeAssignees({ owner, repo, issue_number, assignees: [user] });
+              await reply(`🚫 @${user} has been unassigned from this issue.`);
+              console.log(`Unassigned ${user} from issue #${issue_number}`);
+              return;
+            }
+
+            // Ignore unrelated comments
+            console.log("No recognized command found");
