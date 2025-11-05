@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTheme } from "../../contexts/ThemeContext";
 
 function ClubCard({
   href,
@@ -10,10 +11,15 @@ function ClubCard({
   className = "",
 }) {
   const [showTooltip, setShowTooltip] = useState(false);
+  const { theme } = useTheme();
+  const tooltipTextClass =
+    theme === "light"
+      ? "text-[var(--text-color-secondary)]"
+      : "text-[var(--text-color)]";
 
   const cardContent = (
     <div
-      className={`bg-[var(--activities-club-card-bg)] p-4 rounded-lg w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 max-w-full flex items-center justify-center hover:transform hover:scale-105 transition-transform duration-300 relative ${className}`}
+      className={`bg-[var(--activities-club-card-bg)] p-2 sm:p-3 md:p-4 rounded-lg w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 max-w-full flex items-center justify-center hover:transform hover:scale-105 transition-transform duration-300 relative ${className}`}
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
@@ -25,10 +31,14 @@ function ClubCard({
 
       {/* Tooltip */}
       {showTooltip && (
-        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 text-sm rounded-lg shadow-lg whitespace-nowrap z-10 bg-[var(--card-bg)] text-[var(--text-color)]">
+        <div
+          className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 text-xs sm:text-sm rounded-lg shadow-lg whitespace-nowrap z-10 bg-[var(--card-bg)] ${tooltipTextClass}`}
+        >
           <div className="font-semibold">{title}</div>
           {description && (
-            <div className="text-xs opacity-80 mt-1">{description}</div>
+            <div className="text-[0.7rem] sm:text-xs opacity-90 mt-1">
+              {description}
+            </div>
           )}
           {/* Tooltip arrow */}
           <div

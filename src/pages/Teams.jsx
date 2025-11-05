@@ -27,6 +27,9 @@ import Namisha from "../assets/team/Namisha.jpg"
 import GopalPrasadPatel from "../assets/team/GopalPrasadPatel.jpg"
 import RahulKumar from "../assets/team/RahulKumar.jpg"
 import VivekKushwah from "../assets/team/VivekKushwah.jpg"
+import ShivamMeena from "../assets/team/ShivamMeena.jpg"
+import SarveshPandey from "../assets/team/SarveshPandey.jpg"
+import ShailashKumar from "../assets/team/ShailashKumar.jpg"
 // import HarshitKothari from "../assets/team/HarshitKothari.png"
 // ...add more imports here for each image in assets/team...
 // ...existing code...
@@ -182,7 +185,7 @@ function Teams() {
     {
       name: "Shivam Meena",
       role: "Vindhyachal SAC Secretary",
-      image: defaultImage,
+      image: ShivamMeena,
       email: "",
       phone: "",
       instagram: "",
@@ -286,7 +289,7 @@ function Teams() {
     {
       name: "Sarvesh Pandey",
       role: "Research Scholar Representative",
-      image: defaultImage,
+      image: SarveshPandey,
       email: "",
       phone: "",
       instagram: "",
@@ -295,7 +298,7 @@ function Teams() {
     {
       name: "Shailash Kumar Verma",
       role: "Research Scholar Representative",
-      image: defaultImage,
+      image: ShailashKumar,
       email: "",
       phone: "",
       instagram: "",

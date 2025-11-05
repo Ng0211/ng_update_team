@@ -148,11 +148,11 @@ function Home() {
 
       {/* Three Column Layout */}
       <div className="container mx-auto mb-20 pt-10 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-8 items-start">
           {/* Left Column */}
-          <div className="w-full md:w-auto flex flex-col gap-5 md:gap-20">
+          <div className="w-full md:w-auto flex flex-col gap-2 sm:gap-4 md:gap-10 col-start-1">
             <ClubCard
-              className="ml-auto"
+              className="ml-0"
               href="https:/home/bhm.iitd.ac.in"
               imageSrc={bhmLogo}
               imageAlt="BHM Logo"
@@ -161,7 +161,7 @@ function Home() {
               external={true}
             />
             <ClubCard
-              className="ml-auto"
+              className="ml-0"
               href="https://brca.iitd.ac.in"
               imageSrc={brcaLogo}
               imageAlt="BRCA Logo"
@@ -170,7 +170,7 @@ function Home() {
               external={true}
             />
             <ClubCard
-              className="ml-auto"
+              className="ml-0"
               href="https://bsw.iitd.ac.in"
               imageSrc={bswLogo}
               imageAlt="BSW Logo"
@@ -181,18 +181,18 @@ function Home() {
           </div>
 
           {/* Middle Column */}
-          <div className="w-full md:w-auto flex items-center justify-center m-0 md:p-8">
+          <div className="w-full md:w-auto flex items-center justify-center m-0 md:p-8 col-start-2 row-span-3">
             <div className="flex flex-col items-center justify-center">
               <img
                 src={sacCentreImage}
                 alt="SAC Centre"
-                className="w-full max-w-md md:max-w-xl h-auto pb-5"
+                className="w-full max-w-[140px] sm:max-w-[220px] md:max-w-xl h-auto pb-5"
               />
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="w-full md:w-auto flex flex-col gap-5 md:gap-20">
+          <div className="w-full md:w-auto flex flex-col gap-2 sm:gap-4 md:gap-10 col-start-3">
             <ClubCard
               href="https://bsa.iitd.ac.in"
               imageSrc={bsaLogo}
