@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 import sacLogo from "../../assets/sac_logo.png";
@@ -7,17 +7,32 @@ import { Sun, Moon } from "lucide-react";
 function Navbar() {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const [atTop, setAtTop] = useState(true);
+  useEffect(() => {
+    if (!isHome) return; // only track on Home
+    const handler = () => setAtTop(window.scrollY <= 10);
+    handler();
+    window.addEventListener("scroll", handler, { passive: true });
+    return () => window.removeEventListener("scroll", handler);
+  }, [isHome]);
   const { theme, toggleTheme } = useTheme();
-  const linkTextClass =
-    theme === "light"
-      ? "text-[var(--text-color-secondary)]"
-      : "text-[var(--text-color)]";
+  const onHero = isHome && atTop;
+  const linkTextClass = onHero
+    ? "text-white"
+    : theme === "light"
+    ? "text-[var(--text-color-secondary)]"
+    : "text-[var(--text-color)]";
   const linkClass = `${linkTextClass} hover:text-[var(--primary)] transition-colors text-sm sm:text-base`;
   const brandClass = `${linkTextClass} text-lg sm:text-xl font-bold`;
   return (
     <nav
-      className={`overflow-hidden bg-[var(--card-bg)] p-4 shadow-md ${
-        isHome ? "sticky top-0 z-50" : ""
+      className={`overflow-hidden p-4 ${
+        isHome
+          ? "z-50 " +
+            (onHero
+              ? "fixed top-0 left-0 right-0 w-full bg-transparent"
+              : "sticky top-0 bg-[var(--card-bg)] shadow-md")
+          : "bg-[var(--card-bg)] shadow-md"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
