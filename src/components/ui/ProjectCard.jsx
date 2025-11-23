@@ -11,14 +11,14 @@ function ProjectCard({
 }) {
   const content = (
     <div
-      className={`rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200 h-80 md:h-[26rem] flex flex-col ${className}`}
+      className={` rounded-xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200 h-60 md:h-[25vh] flex flex-col ${className}`}
       style={{ backgroundColor: "var(--contact-form-input-bg)" }}
     >
       <h3 className="text-lg font-semibold text-[var(--text-color)] mb-2">
         {title}
       </h3>
       {description && (
-        <div className="text-sm text-[var(--text-color)] mb-4 overflow-auto pr-1 flex-1">
+        <div className="no-scrollbar text-sm text-[var(--text-color)] mb-4 overflow-auto pr-1 flex-1">
           {description}
         </div>
       )}
