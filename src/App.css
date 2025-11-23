@@ -3,6 +3,16 @@
 /* Import Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
+/* No Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 /* Text Shadow Utilities */
 .text-shadow-sm {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
