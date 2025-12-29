@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 import sacLogo from "../../assets/sac_logo.png";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
+
 
 function Navbar() {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [atTop, setAtTop] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     if (!isHome) return; // only track on Home
     const handler = () => setAtTop(window.scrollY <= 10);
@@ -35,13 +37,15 @@ function Navbar() {
           : "bg-[var(--card-bg)] shadow-md"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      
+      <div className="container mt-2 mb-2 mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img src={sacLogo} alt="SAC Logo" className="h-8 w-auto" />
           <span className={brandClass}>SAC IITD</span>
         </div>
+        
         <div className="flex items-center">
-          <ul className="flex flex-wrap gap-x-4 gap-y-2 mr-4">
+          <ul className="hidden md:flex flex-wrap gap-x-4 gap-y-2 mr-4">
             <li>
               <Link to="/" className={linkClass}>
                 Home
@@ -70,7 +74,7 @@ function Navbar() {
           </ul>
           <button
             onClick={toggleTheme}
-            aria-label={`Switch to ${
+            aria-label={`Switch 
               theme === "light" ? "dark" : "light"
             } mode`}
             aria-pressed={theme === "dark"}
@@ -99,8 +103,50 @@ function Navbar() {
               }`}
             />
           </button>
+          <button
+            className="md:hidden ml-2 text-current text-[var(--navbar-text)] "
+            aria-label="Open menu"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+      
+      <div
+        className={`md:hidden overflow-hidden  rounded transition-all duration-300 ease-in-out
+        ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+        bg-[var(--card-bg)] shadow-md`}
+      >
+        <ul className="flex flex-col gap-4 p-4">
+          <li>
+            <Link to="/" className={linkClass} onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className={linkClass} onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/activities" className={linkClass} onClick={() => setMenuOpen(false)}>
+              Activities
+            </Link>
+          </li>
+          <li>
+            <Link to="/teams" className={linkClass} onClick={() => setMenuOpen(false)}>
+              Teams
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className={linkClass} onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </div>
+
     </nav>
   );
 }

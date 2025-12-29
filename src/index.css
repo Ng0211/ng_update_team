@@ -31,7 +31,7 @@
 
   /* High-contrast surfaces for structural UI like navbar/footer */
   --navbar-bg: #ffffff;
-  --navbar-text: #26282c;
+  --navbar-text: #ececec;
   /* Footer is always brown background with light text */
   --footer-bg: #302122; /* matches card bg tone */
   --footer-text: #ececec;
