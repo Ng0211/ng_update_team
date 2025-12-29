@@ -117,19 +117,19 @@ function Home() {
       </section>
 
       {/* About Section */}
-      {/* <section className="py-12 px-6 lg:px-20 flex flex-col">
+      <section className="py-12 px-6 lg:px-20 flex flex-col">
         <div 
-          className="md:w-[900px] py-6 px-4 md:mx-auto shadow-lg rounded-xl"
-          style={{ backgroundColor: 'var(--home-about-bg)' }}
+          className="md:w-[60vw] py-12 px-4 m-32 md:mx-auto shadow-lg rounded-xl"
+          style={{ backgroundColor: 'var(--card-bg)', color: 'var(--text-color-secondary)' }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--text-color)]">
+          <h2 className="text-3xl mb-12 md:text-4xl font-bold text-center mb-4 ">
             ABOUT US
           </h2>
-          <p className="md:text-xl text-center mb-4 text-[var(--text-color)]">
+          <p className="md:text-xl mb-8 text-center mb-4 ">
             Student Affairs Council is the apex student body of IIT Delhi. It is
             responsible for:
           </p>
-          <ul className="list-disc list-inside mx-auto space-y-2 max-w-2xl text-[var(--text-color)]">
+          <ul className="list-disc mb-8 list-inside mx-auto space-y-2 max-w-[100%] md:max-w-[70%] text-justify  ">
             <li>
               Formulating policies pertaining to all non-academic student
               affairs.
@@ -144,7 +144,7 @@ function Home() {
             </li>
           </ul>
         </div>
-      </section> */}
+      </section>
 
       {/* Three Column Layout */}
       <div className="container mx-auto mb-20 pt-10 px-4">
