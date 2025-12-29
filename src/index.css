@@ -59,7 +59,7 @@
   --activities-tab-active: #d5b230;
   --activities-club-card-bg: #302122;
   --activities-nav-bg: #ffffff;
-  --activities-tab-inactive: #482628;
+  --activities-tab-inactive: #482628;    
 }
 .dark {
   --bg-color: #111111;
@@ -67,7 +67,7 @@
   --text-color-sub: #858585;
   --card-bg: rgb(48, 33, 34);
   --primary: #facc15;
-  --text-color-secondary: #26282c;
+  --text-color-secondary: #ececec;
   --btn-color: #b39805;
   --btn-color-rgb: 179, 152, 5; /* rgb equivalent of --btn-color for effects */
   --btn-text-color: #111111;
