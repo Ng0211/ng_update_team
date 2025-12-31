@@ -117,10 +117,10 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 px-6 lg:px-20 flex flex-col">
+      <section className=" px-4 my-10  w-100%  md:py-1 md:px-5  lg:py-2  lg:px-20 flex flex-col justify-center items-center">
         <div 
-          className="md:w-[60vw] py-12 px-4 m-32 md:mx-auto shadow-lg rounded-xl"
-          style={{ backgroundColor: 'var(--card-bg)', color: 'var(--text-color-secondary)' }}
+          className="shadow-lg rounded-xl  py-5  px-4 w-100%  md:w-[80vw] md:py-6  md:px-4     lg:w-[60vw] lg:py-6  lg:px-4   "
+          style={{ backgroundColor: 'var(--home-about-bg)', color: 'var(--text-color)' }}
         >
           <h2 className="text-3xl mb-12 md:text-4xl font-bold text-center mb-4 ">
             ABOUT US
@@ -148,9 +148,9 @@ function Home() {
 
       {/* Three Column Layout */}
       <div className="container mx-auto mb-20 pt-10 px-4">
-        <div className="grid grid-cols-3 gap-3 sm:gap-4 md:gap-8 items-start">
+        <div className="grid  gap-3 sm:gap-4 md:gap-8 items-start">
           {/* Left Column */}
-          <div className="w-full md:w-auto flex flex-col gap-2 sm:gap-4 md:gap-10 col-start-1">
+          <div className="w-30% md:w-auto flex flex-col items-end gap-2 sm:gap-4 md:gap-10 col-start-1">
             <ClubCard
               className="ml-0"
               href="https:/home/bhm.iitd.ac.in"
@@ -181,7 +181,7 @@ function Home() {
           </div>
 
           {/* Middle Column */}
-          <div className="w-full md:w-auto flex items-center justify-center m-0 md:p-8 col-start-2 row-span-3">
+          <div className="w-40% md:w-auto flex items-center justify-center m-0 md:p-8 col-start-2 row-span-3">
             <div className="flex flex-col items-center justify-center">
               <img
                 src={sacCentreImage}
@@ -192,7 +192,7 @@ function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="w-full md:w-auto flex flex-col gap-2 sm:gap-4 md:gap-10 col-start-3">
+          <div className="w-30% md:w-auto flex flex-col gap-2 sm:gap-4 md:gap-10 col-start-3">
             <ClubCard
               href="https://bsa.iitd.ac.in"
               imageSrc={bsaLogo}

@@ -12,7 +12,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     if (!isHome) return; // only track on Home
-    const handler = () => setAtTop(window.scrollY <= 10);
+    const handler = () => setAtTop(window.scrollY <= 50);
     handler();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
@@ -28,13 +28,13 @@ function Navbar() {
   const brandClass = `${linkTextClass} text-lg sm:text-xl font-bold`;
   return (
     <nav
-      className={`overflow-hidden p-4 ${
+      className={`p-4 w-full transition-all duration-300 ease-in-out ${
         isHome
-          ? "z-50 " +
-            (onHero
-              ? "fixed top-0 left-0 right-0 w-full bg-transparent"
-              : "sticky top-0 bg-[var(--card-bg)] shadow-md")
-          : "bg-[var(--card-bg)] shadow-md"
+          ? "fixed top-0 left-0 z-50 " + 
+            (onHero && !menuOpen
+              ? "bg-transparent shadow-none" 
+              : "bg-[var(--card-bg)] shadow-md") 
+          : "sticky top-0 bg-[var(--card-bg)] shadow-md z-50" 
       }`}
     >
       
@@ -72,6 +72,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          {/*
           <button
             onClick={toggleTheme}
             aria-label={`Switch 
@@ -84,7 +85,6 @@ function Navbar() {
                 : "bg-[var(--primary)]/50"
             }`}
           >
-            {/* Sun/Moon indicators (smaller on mobile) */}
             <Sun
               aria-hidden="true"
               className={`absolute left-1 pointer-events-none transition-opacity duration-300 text-[var(--text-color-secondary)] w-3 h-3 sm:w-3.5 sm:h-3.5 ${
@@ -102,9 +102,10 @@ function Navbar() {
                 theme === "light" ? "translate-x-0" : "translate-x-6"
               }`}
             />
-          </button>
+          </button> 
+          */}
           <button
-            className="md:hidden ml-2 text-current text-[var(--navbar-text)] "
+            className="md:hidden ml-2 text-current text-[white] "
             aria-label="Open menu"
             onClick={() => setMenuOpen(!menuOpen)}
           >

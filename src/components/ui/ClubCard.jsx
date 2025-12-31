@@ -19,7 +19,7 @@ function ClubCard({
 
   const cardContent = (
     <div
-      className={`bg-[var(--activities-club-card-bg)] p-2 sm:p-3 md:p-4 rounded-lg w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 max-w-full flex items-center justify-center hover:transform hover:scale-105 transition-transform duration-300 relative ${className}`}
+      className={`bg-[var(--activities-club-card-bg)] p-2 sm:p-3 md:p-4 rounded-lg w-24 h-24 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-56 lg:h-56 max-w-full flex items-center justify-center hover:transform hover:scale-105 transition-transform duration-300 relative ${className}`}
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
