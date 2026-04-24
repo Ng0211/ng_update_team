@@ -11,6 +11,7 @@ function About() {
     "2022-23",
     "2023-24",
     "2024-25",
+    "2025-26",
   ];
   const mmScrollRef = useRef(null);
   const [selectedYear, setSelectedYear] = useState(null);
@@ -46,6 +47,9 @@ function About() {
     ],
     "2024-25": [
       { date: "6 NOVEMBER'24", href: "https://drive.google.com/file/d/1h1FLPHYTti1Y3FBsyMAK8ByM28pI0aKa/view?usp=sharing" },
+    ],
+    "2025-26": [
+      { date: "17 MARCH'26", href: "https://drive.google.com/file/d/1V98wjXYqYnz85-ysC310Uy6F37tLGcKn/view?usp=sharing" },
     ],
   };
 

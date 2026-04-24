@@ -36,9 +36,12 @@ export default function Footer() {
             <a href="mailto:dgssac@admin.iitd.ac.in" className="underline">
               SAC Deputy General Secretary
             </a>
-            {/* <a href="/team/dgs" className="text-yellow-400 hover:underline">
-              (Profile)
-            </a> */}
+          </div>
+          <div className="flex items-center gap-2 text-sm">
+            <Mail size={16} />
+            <a href="mailto:sacdgsecpg@admin.iitd.ac.in" className="underline">
+              SAC Deputy General Secretary (PG)
+            </a>
           </div>
         </div>
 
