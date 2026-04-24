@@ -6,6 +6,7 @@ import About from './pages/About';
 import Activities from './pages/Activities';
 import Teams from './pages/Teams';  
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import { ThemeProvider } from './contexts/ThemeContext';
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
               <Route path="/activities" element={<Activities />} />
               <Route path="/teams" element={<Teams />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
