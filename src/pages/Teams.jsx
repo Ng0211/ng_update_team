@@ -70,11 +70,11 @@ import HIMANSHUYadav from "../assets/team/HIMANSHUYadav.jpeg"
 import DeepakSharma from "../assets/team/DeepakSharma.jpg"
 import SashankSekharSabat from "../assets/team/SashankSekharSabat.jpg"
 import VinayakThakur from "../assets/team/VinayakThakur.jpeg"
-import SWATIVerma from "../assets/team/SWATIVerma.jpg"
+import SWATIVerma from "../assets/team/SWATIVerma.png"
 import VIKASHMishra from "../assets/team/VIKASHMishra.png"
 import APURVAYadav from "../assets/team/APURVAYadav.jpeg"
 import AYUSHKumar from "../assets/team/AYUSHKumar.jpg"
-import Dewanshi from "../assets/team/default.png"
+import Dewanshi from "../assets/team/Dewanshi.jpeg"
 import AnkitSayannaMyana from "../assets/team/AnkitSayannaMyana.jpg"
 import PrernaPatel from "../assets/team/PrernaPatel.jpg"
 import TapatiParashar from "../assets/team/TapatiParashar.jpeg"
@@ -312,7 +312,7 @@ function Teams() {
       linkedin: "https://www.linkedin.com/in/arinchhabra/",
     },
     {
-      name: "VANSHIKA",
+      name: "Vanshika",
       role: "Nalanda SAC Secy",
       image: VANSHIKA,
       email: "mailto:mas257109@maths.iitd.ac.in",
@@ -331,7 +331,7 @@ function Teams() {
     },
     // ─── PG Representatives ───────────────────────────────────
     {
-      name: "APURVA YADAV",
+      name: "Apura Yadav",
       role: "Research Scholar (Inside Campus)",
       image: APURVAYadav,
       email: "mailto:msz248341@iitd.ac.in",
@@ -340,7 +340,7 @@ function Teams() {
       linkedin: "https://www.linkedin.com/in/apurva-yadav-8343023a0?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
-      name: "AYUSH KUMAR",
+      name: "Ayush Kumar",
       role: "Research Scholar (Inside Campus)",
       image: AYUSHKumar,
       email: "mailto:mez258504@mech.iitd.ac.in",
@@ -404,7 +404,7 @@ function Teams() {
       linkedin: "https://www.linkedin.com/in/ranjeet-maurya-a17375247",
     },
     {
-      name: "SHIVAM SAURABH",
+      name: "Shivam Saurabh",
       role: "Research Scholar (Outside Campus)",
       image: SHIVAMSaurabh,
       email: "mailto:cez258302@iitd.ac.in",
@@ -413,7 +413,7 @@ function Teams() {
       linkedin: "https://www.linkedin.com/in/shivam-saurabh74",
     },
     {
-      name: "HIMANSHU YADAV",
+      name: "Himanshu Yadav",
       role: "Research Scholar (Outside Campus)",
       image: HIMANSHUYadav,
       email: "mailto:cyz248129@iitd.ac.in",
@@ -444,7 +444,7 @@ function Teams() {
     },
 
     {
-      name: "SWATI VERMA",
+      name: "Swati Verma",
       role: "PG Program Representative",
       image: SWATIVerma,
       email: "mailto:ppm254510@iitd.ac.in",
@@ -453,7 +453,7 @@ function Teams() {
       linkedin: "https://www.linkedin.com/in/swati-verma-525117297",
     },
     {
-      name: "VIKASH MISHRA",
+      name: "Vikash Mishra",
       role: "M. Tech Representative",
       image: VIKASHMishra,
       email: "mailto:eea252868@ee.iitd.ac.in",
@@ -784,7 +784,7 @@ function Teams() {
 
       {/* Director */}
       <div className="w-full flex flex-col items-center">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Director</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Director & Dean</h1>
         <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-20 m-4">
           {defteam.slice(0, 2).map((person, idx) => <TeamCard key={idx} {...person} />)}
         </div>
