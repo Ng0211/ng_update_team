@@ -11,19 +11,19 @@ export default function TeamCard({
   percentageOffset = "10%",
 }) {
   return (
-    <div className="bg-[var(--card-bg)] rounded-lg text-center transition-all hover:shadow-lg/50 hover:brightness-110 hover:z-10 relative overflow-hidden flex flex-col items-center gap-y-2 w-full max-w-[16rem] md:max-w-[18rem]">
+    <div className="bg-[var(--card-bg)] rounded-lg text-center transition-all hover:shadow-lg/30 hover:brightness-110 hover:z-20 relative overflow-hidden flex flex-col items-center gap-y-2 w-full max-w-[16rem] md:max-w-[18rem]">
       <img
         src={image}
         alt={name}
         className="w-full h-52 sm:h-56 object-cover"
         style={{
           objectPosition: "center " + percentageOffset,
-          maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+          maskImage: "linear-gradient(to bottom, black 0%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, black 70%, transparent 100%)",
+            "linear-gradient(to bottom, black 80%, transparent 100%)",
         }}
       />
-      <div className="flex flex-col items-center px-4 py-2 w-full">
+      <div className="flex flex-col items-center px-4 py-2 w-full -mt-5 relative z-50">
         <h2 className="mt-3 text-base sm:text-lg font-semibold text-[var(--teams-text-hover)]">
           {name}
         </h2>

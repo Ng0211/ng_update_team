@@ -3,12 +3,12 @@ import TeamCard from "../components/ui/TeamCard";
 
 import PrasoonRaj from "../assets/team/PrasoonRaj.jpg"
 import defaultImage from "../assets/team/default.png"
-import KrishAgrawal from "../assets/team/default.png"  // replace existing line
-import BavneetSinghBrar from "../assets/team/BavneetSinghBrar.jpg"
+import KrishAgrawal from "../assets/team/KrishAgrawal.jpeg"  
+import BavneetSinghBrar from "../assets/team/BavneetSinghBrar.png"
 import KeshavGupta from "../assets/team/KeshavGupta.jpg"
 import AkshitJain from "../assets/team/AkshitJain.jpg"
 import RohitKumar from "../assets/team/RohitKumar.jpg"
-import SayantaniGhosh from "../assets/team/default.png"
+import SayantaniGhosh from "../assets/team/SayantaniGhosh.png"
 import ParteekKumar from "../assets/team/ParteekKumar.jpeg"
 import AnhadGoel from "../assets/team/AnhadGoel.jpg"
 import DeerghPatel from "../assets/team/DeerghPatel.jpg"
@@ -21,8 +21,8 @@ import MohammadEmaadArif from "../assets/team/MohammadEmaadArif.jpg"
 import SanyamGarg from "../assets/team/SanyamGarg.jpg"
 import IraSingh from "../assets/team/IraSingh.png"
 import AmolGupta from "../assets/team/AmolGupta.jpg"
-import RishitSrivastava from "../assets/team/default.png"
-import AnshulGoyal from "../assets/team/default.png"
+import RishitSrivastava from "../assets/team/RishitSrivastava.jpeg"
+import AnshulGoyal from "../assets/team/AnshulGoyal.jpeg"
 import AbrittyKisku from "../assets/team/AbrittyKisku.png"
 import ArnabDas from "../assets/team/ArnabDas.png"
 import RohanGupta from "../assets/team/RohanGupta.jpg"
@@ -33,37 +33,35 @@ import ApoorvSharma from "../assets/team/ApoorvSharma.jpg"
 import SrishtiSahu from "../assets/team/SrishtiSahu.jpg"
 import NaitikSingla from "../assets/team/NaitikSingla.jpg"
 import AshwaryPrasad from "../assets/team/AshwaryPrasad.jpg"
-import TanujaLasyal from "../assets/team/default.png"
+import TanujaLasyal from "../assets/team/TanujaLasyal.jpeg"
 import DeveshSharma from "../assets/team/DeveshSharma.jpg"
-//import KrishAgrawal from "../assets/team/KrishAgrawal.jpg"
 import RishabhJoshi from "../assets/team/RishabhJoshi.jpg"
 import HemangMathur from "../assets/team/HemangMathur.jpg"
 import ArinChhabra from "../assets/team/ArinChhabra.jpg"
 import HarshRajSingh from "../assets/team/HarshRajSingh.jpg"
-import RachitAtulRambhia from "../assets/team/default.png"
-import YuvrajSinghShekhawat from "../assets/team/default.png"
+import RachitAtulRambhia from "../assets/team/RachitAtulRambhia.png"
+import YuvrajSinghShekhawat from "../assets/team/YuvrajSinghShekhawat.jpg"
 import TusharSharma from "../assets/team/TusharSharma.jpg"
-import KanikaArya from "../assets/team/default.png"
+import KanikaArya from "../assets/team/KanikaArya.jpeg"
 import NavneetSingh from "../assets/team/NavneetSingh.jpg"
 import VANSHIKA from "../assets/team/VANSHIKA.jpg"
 import AlokKumarSah from "../assets/team/AlokKumarSah.png"
 import SaarajGoel from "../assets/team/SaarajGoel.jpg"
 import SagnikGhosh from "../assets/team/SagnikGhosh.jpg"
 import KshitijSnehalkumarBokare from "../assets/team/KshitijSnehalkumarBokare.jpg"
-import AshitaGupta from "../assets/team/default.png"
 import AdityaBanka from "../assets/team/AdityaBanka.jpg"
 import RuchirrLodha from "../assets/team/RuchirrLodha.jpg"
-import RahulKumar from "../assets/team/default.png"
+import RahulKumar from "../assets/team/RahulKumar.jpeg"
 import PushkinMangla from "../assets/team/PushkinMangla.jpeg"
+import GopalPrasadPatel from "../assets/team/GopalPrasadPatel.jpeg"
+import Director from "../assets/team/Director.jpg"
+import DSA from "../assets/team/DSA.jpg"
+import ADSW from "../assets/team/ADSW.jpg"
+import ADSE from "../assets/team/ADSE.jpg"
+import ADHM from "../assets/team/ADHM.jpg"
+import Utkarsh from "../assets/team/Utkarsh.jpeg"
+import ShaluDeshwal from "../assets/team/ShaluDeshwal.jpeg"
 
-// Dummy until real photos added
-// import DirectorName from "../assets/team/default.png"
-// import ADSWName from "../assets/team/default.png"
-// import ADSEName from "../assets/team/default.png"
-// import ADHMName from "../assets/team/default.png"
-// import Utkarsh from "../assets/team/default.png"
-// import ShaluDeshwal from "../assets/team/default.png"
-// import HarshitKothari from "../assets/team/HarshitKothari.png"
 // ...add more imports here for each image in assets/team...
 // ...existing code...
 
@@ -72,18 +70,18 @@ function Teams() {
 
   // ─── Director ───────────────────────────────────────────
   {
-    name: "Director Name",
+    name: "Prof. Rangana Banerjee",
     role: "Director",
-    image: defaultImage,
+    image: Director,
     email: "mailto:director@iitd.ac.in",
     phone: "0000000000",
     instagram: "",
     linkedin: "",
   },
   {
-    name: " B. K. Panigrahi",
-    role: "",
-    image: defaultImage,
+    name: "Prof. B. K. Panigrahi",
+    role: "Dean of Student Affairs",
+    image: DSA,
     email: "mailto:director@iitd.ac.in",
     phone: "0000000000",
     instagram: "",
@@ -91,27 +89,27 @@ function Teams() {
   },
   // ─── Associate Deans ─────────────────────────────────────
   {
-    name: "ADSW Name",
+    name: "Prof. Sreedevi Upadhyayula",
     role: "Associate Dean Student Welfare",
-    image: defaultImage,
+    image: ADSW,
     email: "mailto:adsw@iitd.ac.in",
     phone: "0000000000",
     instagram: "",
     linkedin: "",
   },
   {
-    name: "ADSE Name",
-    role: "Associate Dean Student Experience",
-    image: defaultImage,
+    name: "Prof. S. Pradyumna",
+    role: "Associate Dean Student Events",
+    image: ADSE,
     email: "mailto:adse@iitd.ac.in",
     phone: "0000000000",
     instagram: "",
     linkedin: "",
   },
   {
-    name: "ADHM Name",
+    name: "Prof. Prabal Talukdar",
     role: "Associate Dean Hostel Management",
-    image: defaultImage,
+    image: ADHM,
     email: "mailto:adhm@iitd.ac.in",
     phone: "0000000000",
     instagram: "",
@@ -132,7 +130,7 @@ function Teams() {
     {
     name: "Utkarsh",
     role: "SAC General Secretary",
-    image: defaultImage,
+    image: Utkarsh,
     email: "mailto:utkarsh@iitd.ac.in",
     phone: "0000000000",
     instagram: "",
@@ -141,7 +139,7 @@ function Teams() {
   {
     name: "Gopal Prasad Patel",
     role: "SAC Deputy General Secretary (PG)",
-    image: defaultImage,
+    image: GopalPrasadPatel,
     email: "mailto:cez228414@iitd.ac.in",
     phone: "7982052877",
     instagram: "",
@@ -306,7 +304,7 @@ function Teams() {
   {
     name: "Shalu Deshwal",
     role: "Saptagiri SAC Secy",
-    image: defaultImage,
+    image: ShaluDeshwal,
     email: "mailto:cyz228286@iitd.ac.in",
     phone: "8295785288",
     instagram: "",
@@ -335,16 +333,16 @@ function Teams() {
 
 
   // ─── Board General & Deputy General Secretaries ──────────
-  {
-    name: "Akshit Jain",
-    role: "BRCA General Secretary",
-    image: AkshitJain,
-    email: "mailto:bb1230860@iitd.ac.in",
-    phone: "9893084255",
-    instagram: "https://www.instagram.com/_akshitjain__/",
-    linkedin: "https://www.linkedin.com/in/akshitjain1510",
+     {
+    name: "Sanyam Garg",
+    role: "BHM Deputy General Secretary",
+    image: SanyamGarg,
+    email: "mailto:mt1230732@iitd.ac.in",
+    phone: "7014374416",
+    instagram: "https://www.instagram.com/sanyam.garg_304/",
+    linkedin: "https://www.linkedin.com/in/sanyam-garg28/",
   },
-    {
+   {
     name: "Naitik Singla",
     role: "BHM General Secretary",
     image: NaitikSingla,
@@ -353,7 +351,16 @@ function Teams() {
     instagram: "https://www.instagram.com/naitiksingla22/",
     linkedin: "https://linkedin.com/in/naitiksingla",
   },
-    {
+     {
+    name: "Apoorv Sharma",
+    role: "BHM Deputy General Secretary",
+    image: ApoorvSharma,
+    email: "mailto:ee3230996@iitd.ac.in",
+    phone: "9783399711",
+    instagram: "https://www.instagram.com/a_p00rv/",
+    linkedin: "https://www.linkedin.com/in/apoorv-sharma-ab0889288/",
+  },
+     {
     name: "Hemang Mathur",
     role: "BSP General Secretary",
     image: HemangMathur,
@@ -361,6 +368,26 @@ function Teams() {
     phone: "8287454037",
     instagram: "https://www.instagram.com/hehehemuuu/",
     linkedin: "https://www.linkedin.com/in/hemang-mathur-88326a28a/",
+  },
+    {
+    name: "Rishit Srivastava",
+    role: "BSP Deputy General Secretary",
+    image: RishitSrivastava,
+    email: "mailto:es1231088@iitd.ac.in",
+    phone: "9651321520",
+    instagram: "https://www.instagram.com/_.rishit.___/",
+    linkedin: "https://www.linkedin.com/in/rishit-srivastava-9894211b6?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+  },
+
+  
+     {
+    name: "Yuvraj singh shekhawat",
+    role: "BSA Deputy General Secretary",
+    image: YuvrajSinghShekhawat,
+    email: "mailto:ce1231209@iitd.ac.in",
+    phone: "9549058156",
+    instagram: "https://www.instagram.com/yuvrajsinghshekhawat30/",
+    linkedin: "https://www.linkedin.com/in/yuvraj-singh-shekhawat-289a71320/",
   },
   {
     name: "Rachit Atul Rambhia",
@@ -372,6 +399,15 @@ function Teams() {
     linkedin: "https://www.linkedin.com/in/rachit-rambhia-iitd1201",
   },
     {
+    name: "Name",
+    role: "BSA Deputy General Secretary (PG)",
+    image: defaultImage,
+    email: "",
+    phone: "",
+    instagram: "",
+    linkedin: "",
+  },
+    {
     name: "Amol Gupta",
     role: "BSW General Secretary",
     image: AmolGupta,
@@ -380,34 +416,7 @@ function Teams() {
     instagram: "https://www.instagram.com/amol_gupta05/",
     linkedin: "https://www.linkedin.com/in/amolgupta05",
   },
-  {
-    name: "Sanyam Garg",
-    role: "BHM Deputy General Secretary",
-    image: SanyamGarg,
-    email: "mailto:mt1230732@iitd.ac.in",
-    phone: "7014374416",
-    instagram: "https://www.instagram.com/sanyam.garg_304/",
-    linkedin: "https://www.linkedin.com/in/sanyam-garg28/",
-  },
-    {
-    name: "Apoorv Sharma",
-    role: "BHM Deputy General Secretary",
-    image: ApoorvSharma,
-    email: "mailto:ee3230996@iitd.ac.in",
-    phone: "9783399711",
-    instagram: "https://www.instagram.com/a_p00rv/",
-    linkedin: "https://www.linkedin.com/in/apoorv-sharma-ab0889288/",
-  },
 
-  {
-    name: "Rishit Srivastava",
-    role: "BSP Deputy General Secretary",
-    image: RishitSrivastava,
-    email: "mailto:es1231088@iitd.ac.in",
-    phone: "9651321520",
-    instagram: "https://www.instagram.com/_.rishit.___/",
-    linkedin: "https://www.linkedin.com/in/rishit-srivastava-9894211b6?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-  },
   {
     name: "Devesh Sharma",
     role: "BSW Deputy General Secretary",
@@ -417,6 +426,16 @@ function Teams() {
     instagram: "https://www.instagram.com/devesh_1811/",
     linkedin: "https://www.linkedin.com/in/devesh-sharma-bb931730a/",
   },
+    {
+    name: "Akshit Jain",
+    role: "BRCA General Secretary",
+    image: AkshitJain,
+    email: "mailto:bb1230860@iitd.ac.in",
+    phone: "9893084255",
+    instagram: "https://www.instagram.com/_akshitjain__/",
+    linkedin: "https://www.linkedin.com/in/akshitjain1510",
+  },
+
   {
     name: "Rishabh Joshi",
     role: "BRCA Deputy General Secretary",
@@ -427,15 +446,6 @@ function Teams() {
     linkedin: "https://www.linkedin.com/in/rishabh-joshi-645243284/",
   },
 
-  {
-    name: "Yuvraj singh shekhawat",
-    role: "BSA Deputy General Secretary",
-    image: YuvrajSinghShekhawat,
-    email: "mailto:ce1231209@iitd.ac.in",
-    phone: "9549058156",
-    instagram: "https://www.instagram.com/yuvrajsinghshekhawat30/",
-    linkedin: "https://www.linkedin.com/in/yuvraj-singh-shekhawat-289a71320/",
-  },
 
   // ─── House Secretaries ───────────────────────────────────
   {
@@ -589,7 +599,7 @@ function Teams() {
     <div className="container mx-auto p-4 bg-[var(--bg-color)] flex flex-col items-center">
       <div className="w-full flex flex-col items-center">
         <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Director</h1>
-        <div className="w-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 justify-evenly justify-items-center m-4">
+  <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-16 m-4">
           {defteam.slice(0,2).map((person, idx) => (
             <TeamCard key={idx} {...person} />
           ))}
@@ -610,40 +620,54 @@ function Teams() {
             <TeamCard key={idx} {...person} />
           ))}
         </div>
-                <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {defteam.slice(8, 28).map((person, idx) => (
-            <TeamCard key={idx} {...person} />
-          ))}
-        </div>
-      </div>
-      {/* <div className="w-full flex flex-col items-center">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">SAC Secretaries</h1>
+        <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--text-color)] mt-6">SAC Secretaries</h2>
         <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {defteam.slice(8,26).map((person, idx) => (
-            <TeamCard key={idx} {...person} />
-          ))}
-        </div>
-      </div> */}
-      {/* <div className="w-full flex flex-col items-center">
-        <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Design and Tech Team</h1>
-        <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {defteam.slice(26,33).map((person, idx) => (
-            <TeamCard key={idx} {...person} />
-          ))}
-        </div>
-      </div> */}
-<div className="w-full flex flex-col items-center">
-  <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Board Secretaries</h1>
+  {defteam.slice(8, 26).map((person, idx) => (
+    <TeamCard key={idx} {...person} />
+  ))}
+</div>
+<h2 className="text-2xl font-semibold text-center mb-6 text-[var(--text-color)] mt-6">Design & Tech Team</h2>
   <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-16 m-4">
-    {defteam.slice(28,39).map((person, idx) => (
-      <TeamCard key={idx} {...person} />
-    ))}
+  {defteam.slice(26, 28).map((person, idx) => (
+    <TeamCard key={idx} {...person} />
+  ))}
+</div>
+
+      </div>
+
+      <div className="w-full flex flex-col items-center">
+  <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">Board Secretaries</h1>
+
+  <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--text-color)] mt-4">BHM</h2>
+  <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-16 m-4">
+    {defteam.slice(28, 31).map((person, idx) => <TeamCard key={idx} {...person} />)}
+  </div>
+
+  <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--text-color)] mt-4">BSP</h2>
+  <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-16 m-4">
+    {defteam.slice(31, 33).map((person, idx) => <TeamCard key={idx} {...person} />)}
+  </div>
+
+  <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--text-color)] mt-4">BSA</h2>
+  <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-16 m-4">
+    {defteam.slice(33, 36).map((person, idx) => <TeamCard key={idx} {...person} />)}
+  </div>
+
+  <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--text-color)] mt-4">BSW</h2>
+  <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-16 m-4">
+    {defteam.slice(36, 38).map((person, idx) => <TeamCard key={idx} {...person} />)}
+  </div>
+
+  <h2 className="text-2xl font-semibold text-center mb-6 text-[var(--text-color)] mt-4">BRCA</h2>
+  <div className="w-5/6 flex flex-wrap justify-center gap-8 md:gap-16 m-4">
+    {defteam.slice(38, 40).map((person, idx) => <TeamCard key={idx} {...person} />)}
   </div>
 </div>
+
       <div className="w-full flex flex-col items-center">
         <h1 className="text-3xl font-bold text-center mb-8 text-[var(--text-color)] mt-8">House Secretaries</h1>
         <div className="w-5/6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-evenly justify-items-center m-4">
-          {defteam.slice(39,54).map((person, idx) => (
+          {defteam.slice(40,55).map((person, idx) => (
             <TeamCard key={idx} {...person} />
           ))}
         </div>
